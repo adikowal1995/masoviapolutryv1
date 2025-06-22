@@ -56,7 +56,7 @@ const Index = () => {
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold px-8 py-4 text-lg">
                 Pobierz katalog produktów
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 bg-transparent px-8 py-4 text-lg">
                 <Phone className="mr-2 h-5 w-5" />
                 Skontaktuj się z nami
               </Button>
@@ -318,7 +318,7 @@ const Index = () => {
             <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold px-8 py-4">
               Zapytaj o ofertę specjalną
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 px-8 py-4">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 bg-transparent px-8 py-4">
               Umów spotkanie
             </Button>
           </div>
