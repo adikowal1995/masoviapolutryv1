@@ -151,7 +151,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-green-800 mb-6">O Firmie Polski Drób Premium</h2>
+              <h2 className="text-4xl font-bold text-green-800 mb-6">Nasza Historia</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Od ponad 15 lat jesteśmy wiodącym eksporterem polskiego drobiu, który zdobył zaufanie klientów w całej Europie, Azji i na Bliskim Wschodzie. Nasza misja to dostarczanie najwyższej jakości mięsa drobiowego przy zachowaniu najwyższych standardów bezpieczeństwa i świeżości.
               </p>
@@ -187,9 +187,9 @@ const Index = () => {
               <div className="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-white font-bold text-4xl">PD</span>
+                    <span className="text-white font-bold text-4xl">MP</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-green-800 mb-2">Polski Drób Premium</h3>
+                  <h3 className="text-2xl font-bold text-green-800 mb-2">Masovia Polutry</h3>
                   <p className="text-green-600">Trusted Quality Since 2009</p>
                 </div>
               </div>
@@ -287,7 +287,7 @@ const Index = () => {
                 <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold">PD</span>
                 </div>
-                <span className="text-xl font-bold">Polski Drób Premium</span>
+                <span className="text-xl font-bold">Masovia Polutry</span>
               </div>
               <p className="text-green-200">
                 Wiodący eksporter najwyższej jakości polskiego drobiu na rynki międzynarodowe.
@@ -328,7 +328,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-green-800 mt-8 pt-8 text-center text-green-200">
-            <p>&copy; 2024 Polski Drób Premium. Wszystkie prawa zastrzeżone.</p>
+            <p>© 2024 Masovia Polutry. Wszystkie prawa zastrzeżone.</p>
           </div>
         </div>
       </footer>
