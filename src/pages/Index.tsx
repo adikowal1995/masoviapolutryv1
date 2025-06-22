@@ -114,11 +114,11 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProductCard title="Piersi z kurczaka" description="Premium filety bez kości, idealne dla gastronomii i przetwórstwa" features={["Bez antybiotyków", "Chłodzone", "Mrożone dostępne"]} image="photo-1548550023-2bdb3c5beed7" />
-            <ProductCard title="Skrzydełka" description="Soczyste skrzydełka w różnych formatach i rozmiarach" features={["Różne cięcia", "Świeże i mrożone", "Pakowanie na zamówienie"]} image="photo-1551218370-8f4d7ee1dbad" />
-            <ProductCard title="Ćwiartki" description="Ćwiartki górne i dolne dla hurtowni i sieci handlowych" features={["Optymalne opakowanie", "Długa trwałość", "Konkurencyjne ceny"]} image="photo-1584464491033-06628f3a6b7b" />
-            <ProductCard title="Cały kurczak" description="Kurczaki całe o różnej wadze, dla różnych zastosowań" features={["Waga 1-2.5kg", "Klasa A", "Certyfikowane pochodzenie"]} image="photo-1559827260-dc66d52bef19" />
-            <ProductCard title="Podroby" description="Wysokiej jakości podroby dla wymagających klientów" features={["Serca, żołądki", "Wątróbki", "Kontrola weteryjna"]} image="photo-1548199973-03cce0bbc87b" />
-            <ProductCard title="Przetwory" description="Gotowe produkty i półprodukty według specyfikacji klienta" features={["Według receptur", "Private label", "Własna marka"]} image="photo-1551218808-94e220e084d2" />
+            <ProductCard title="Skrzydełka" description="Soczyste skrzydełka w różnych formatach i rozmiarach" features={["Różne cięcia", "Świeże i mrożone", "Pakowanie na zamówienie"]} image="photo-1444731961956-751ed90baaa5" />
+            <ProductCard title="Ćwiartki" description="Ćwiartki górne i dolne dla hurtowni i sieci handlowych" features={["Optymalne opakowanie", "Długa trwałość", "Konkurencyjne ceny"]} image="photo-1518191319892-1c2dcb9836c3" />
+            <ProductCard title="Cały kurczak" description="Kurczaki całe o różnej wadze, dla różnych zastosowań" features={["Waga 1-2.5kg", "Klasa A", "Certyfikowane pochodzenie"]} image="photo-1504439904031-93ded9f93e4e" />
+            <ProductCard title="Podroby" description="Wysokiej jakości podroby dla wymagających klientów" features={["Serca, żołądki", "Wątróbki", "Kontrola weteryjna"]} image="photo-1444665559562-dcea25ea8801" />
+            <ProductCard title="Przetwory" description="Gotowe produkty i półprodukty według specyfikacji klienta" features={["Według receptur", "Private label", "Własna marka"]} image="photo-1506905925346-21bda4d32df4" />
           </div>
 
           <div className="text-center mt-12">
