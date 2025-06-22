@@ -6,6 +6,7 @@ import { CheckCircle, Phone, Mail, MapPin, Award, Truck, Shield, Globe } from "l
 import ContactForm from '../components/ContactForm';
 import ProductCard from '../components/ProductCard';
 import CertificationBadge from '../components/CertificationBadge';
+
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Header/Navigation */}
@@ -14,7 +15,7 @@ const Index = () => {
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">PD</span>
+                <span className="text-white font-bold text-xl">MP</span>
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-green-800">Masovia Polutry</h1>
@@ -230,8 +231,8 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-green-800">Email</h4>
-                    <p className="text-gray-600">export@polskidrob.pl</p>
-                    <p className="text-gray-600">info@polskidrob.pl</p>
+                    <p className="text-gray-600">export@masoviapoultry.pl</p>
+                    <p className="text-gray-600">info@masoviapoultry.pl</p>
                   </div>
                 </div>
                 
@@ -285,7 +286,7 @@ const Index = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">PD</span>
+                  <span className="text-white font-bold">MP</span>
                 </div>
                 <span className="text-xl font-bold">Masovia Polutry</span>
               </div>
@@ -320,7 +321,7 @@ const Index = () => {
               <h4 className="font-bold mb-4">Kontakt</h4>
               <ul className="space-y-2 text-green-200">
                 <li>+48 123 456 789</li>
-                <li>export@polskidrob.pl</li>
+                <li>export@masoviapoultry.pl</li>
                 <li>ul. Przemysłowa 15</li>
                 <li>00-001 Warszawa</li>
               </ul>
@@ -334,4 +335,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
