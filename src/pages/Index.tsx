@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,10 +6,8 @@ import { CheckCircle, Phone, Mail, MapPin, Award, Truck, Shield, Globe } from "l
 import ContactForm from '../components/ContactForm';
 import ProductCard from '../components/ProductCard';
 import CertificationBadge from '../components/CertificationBadge';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+  return <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Header/Navigation */}
       <header className="bg-white shadow-sm border-b border-green-100">
         <div className="container mx-auto px-4 py-4">
@@ -20,7 +17,7 @@ const Index = () => {
                 <span className="text-white font-bold text-xl">PD</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-green-800">Polski Drób Premium</h1>
+                <h1 className="text-2xl font-bold text-green-800">Masovia Polutry</h1>
                 <p className="text-sm text-green-600">Eksporter najwyższej jakości</p>
               </div>
             </div>
@@ -42,9 +39,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-white/20 text-white border-white/30 px-4 py-2 text-lg">
-              🇵🇱 100% Polski Drób Premium
-            </Badge>
+            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Najwyższa Jakość<br />
               <span className="text-yellow-300">Polskiego Drobiu</span>
@@ -117,42 +112,12 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProductCard 
-              title="Piersi z kurczaka"
-              description="Premium filety bez kości, idealne dla gastronomii i przetwórstwa"
-              features={["Bez antybiotyków", "Chłodzone", "Mrożone dostępne"]}
-              image="photo-1465146344425-f00d5f5c8f07"
-            />
-            <ProductCard 
-              title="Skrzydełka"
-              description="Soczyste skrzydełka w różnych formatach i rozmiarach"
-              features={["Różne cięcia", "Świeże i mrożone", "Pakowanie na zamówienie"]}
-              image="photo-1506744038136-46273834b3fb"
-            />
-            <ProductCard 
-              title="Ćwiartki"
-              description="Ćwiartki górne i dolne dla hurtowni i sieci handlowych"
-              features={["Optymalne opakowanie", "Długa trwałość", "Konkurencyjne ceny"]}
-              image="photo-1517022812141-23620dba5c23"
-            />
-            <ProductCard 
-              title="Cały kurczak"
-              description="Kurczaki całe o różnej wadze, dla różnych zastosowań"
-              features={["Waga 1-2.5kg", "Klasa A", "Certyfikowane pochodzenie"]}
-              image="photo-1493962853295-0fd70327578a"
-            />
-            <ProductCard 
-              title="Podroby"
-              description="Wysokiej jakości podroby dla wymagających klientów"
-              features={["Serca, żołądki", "Wątróbki", "Kontrola weteryjna"]}
-              image="photo-1465379944081-7f47de8d74ac"
-            />
-            <ProductCard 
-              title="Przetwory"
-              description="Gotowe produkty i półprodukty według specyfikacji klienta"
-              features={["Według receptur", "Private label", "Własna marka"]}
-              image="photo-1465146344425-f00d5f5c8f07"
-            />
+            <ProductCard title="Piersi z kurczaka" description="Premium filety bez kości, idealne dla gastronomii i przetwórstwa" features={["Bez antybiotyków", "Chłodzone", "Mrożone dostępne"]} image="photo-1465146344425-f00d5f5c8f07" />
+            <ProductCard title="Skrzydełka" description="Soczyste skrzydełka w różnych formatach i rozmiarach" features={["Różne cięcia", "Świeże i mrożone", "Pakowanie na zamówienie"]} image="photo-1506744038136-46273834b3fb" />
+            <ProductCard title="Ćwiartki" description="Ćwiartki górne i dolne dla hurtowni i sieci handlowych" features={["Optymalne opakowanie", "Długa trwałość", "Konkurencyjne ceny"]} image="photo-1517022812141-23620dba5c23" />
+            <ProductCard title="Cały kurczak" description="Kurczaki całe o różnej wadze, dla różnych zastosowań" features={["Waga 1-2.5kg", "Klasa A", "Certyfikowane pochodzenie"]} image="photo-1493962853295-0fd70327578a" />
+            <ProductCard title="Podroby" description="Wysokiej jakości podroby dla wymagających klientów" features={["Serca, żołądki", "Wątróbki", "Kontrola weteryjna"]} image="photo-1465379944081-7f47de8d74ac" />
+            <ProductCard title="Przetwory" description="Gotowe produkty i półprodukty według specyfikacji klienta" features={["Według receptur", "Private label", "Własna marka"]} image="photo-1465146344425-f00d5f5c8f07" />
           </div>
 
           <div className="text-center mt-12">
@@ -174,21 +139,9 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <CertificationBadge 
-              name="HACCP"
-              description="System analizy zagrożeń i krytycznych punktów kontroli"
-              icon={<Shield className="h-12 w-12 text-green-600" />}
-            />
-            <CertificationBadge 
-              name="ISO 22000"
-              description="Międzynarodowy standard zarządzania bezpieczeństwem żywności"
-              icon={<Award className="h-12 w-12 text-green-600" />}
-            />
-            <CertificationBadge 
-              name="GlobalG.A.P."
-              description="Globalne standardy dobrej praktyki rolniczej"
-              icon={<CheckCircle className="h-12 w-12 text-green-600" />}
-            />
+            <CertificationBadge name="HACCP" description="System analizy zagrożeń i krytycznych punktów kontroli" icon={<Shield className="h-12 w-12 text-green-600" />} />
+            <CertificationBadge name="ISO 22000" description="Międzynarodowy standard zarządzania bezpieczeństwem żywności" icon={<Award className="h-12 w-12 text-green-600" />} />
+            <CertificationBadge name="GlobalG.A.P." description="Globalne standardy dobrej praktyki rolniczej" icon={<CheckCircle className="h-12 w-12 text-green-600" />} />
           </div>
         </div>
       </section>
@@ -379,8 +332,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
