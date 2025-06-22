@@ -113,12 +113,12 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProductCard title="Piersi z kurczaka" description="Premium filety bez kości, idealne dla gastronomii i przetwórstwa" features={["Bez antybiotyków", "Chłodzone", "Mrożone dostępne"]} image="photo-1465146344425-f00d5f5c8f07" />
-            <ProductCard title="Skrzydełka" description="Soczyste skrzydełka w różnych formatach i rozmiarach" features={["Różne cięcia", "Świeże i mrożone", "Pakowanie na zamówienie"]} image="photo-1506744038136-46273834b3fb" />
-            <ProductCard title="Ćwiartki" description="Ćwiartki górne i dolne dla hurtowni i sieci handlowych" features={["Optymalne opakowanie", "Długa trwałość", "Konkurencyjne ceny"]} image="photo-1517022812141-23620dba5c23" />
-            <ProductCard title="Cały kurczak" description="Kurczaki całe o różnej wadze, dla różnych zastosowań" features={["Waga 1-2.5kg", "Klasa A", "Certyfikowane pochodzenie"]} image="photo-1493962853295-0fd70327578a" />
-            <ProductCard title="Podroby" description="Wysokiej jakości podroby dla wymagających klientów" features={["Serca, żołądki", "Wątróbki", "Kontrola weteryjna"]} image="photo-1465379944081-7f47de8d74ac" />
-            <ProductCard title="Przetwory" description="Gotowe produkty i półprodukty według specyfikacji klienta" features={["Według receptur", "Private label", "Własna marka"]} image="photo-1465146344425-f00d5f5c8f07" />
+            <ProductCard title="Piersi z kurczaka" description="Premium filety bez kości, idealne dla gastronomii i przetwórstwa" features={["Bez antybiotyków", "Chłodzone", "Mrożone dostępne"]} image="photo-1548550023-2bdb3c5beed7" />
+            <ProductCard title="Skrzydełka" description="Soczyste skrzydełka w różnych formatach i rozmiarach" features={["Różne cięcia", "Świeże i mrożone", "Pakowanie na zamówienie"]} image="photo-1551218370-8f4d7ee1dbad" />
+            <ProductCard title="Ćwiartki" description="Ćwiartki górne i dolne dla hurtowni i sieci handlowych" features={["Optymalne opakowanie", "Długa trwałość", "Konkurencyjne ceny"]} image="photo-1584464491033-06628f3a6b7b" />
+            <ProductCard title="Cały kurczak" description="Kurczaki całe o różnej wadze, dla różnych zastosowań" features={["Waga 1-2.5kg", "Klasa A", "Certyfikowane pochodzenie"]} image="photo-1559827260-dc66d52bef19" />
+            <ProductCard title="Podroby" description="Wysokiej jakości podroby dla wymagających klientów" features={["Serca, żołądki", "Wątróbki", "Kontrola weteryjna"]} image="photo-1548199973-03cce0bbc87b" />
+            <ProductCard title="Przetwory" description="Gotowe produkty i półprodukty według specyfikacji klienta" features={["Według receptur", "Private label", "Własna marka"]} image="photo-1551218808-94e220e084d2" />
           </div>
 
           <div className="text-center mt-12">
