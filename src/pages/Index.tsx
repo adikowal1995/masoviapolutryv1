@@ -7,8 +7,12 @@ import { CheckCircle, Phone, Mail, MapPin, Award, Truck, Shield, Globe, Factory,
 import ContactForm from '../components/ContactForm';
 import ProductCard from '../components/ProductCard';
 import CertificationBadge from '../components/CertificationBadge';
+import LanguageSwitcher from '../components/LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Header/Navigation */}
       <header className="bg-white shadow-sm border-b border-green-100 sticky top-0 z-50">
@@ -23,15 +27,16 @@ const Index = () => {
                 <p className="text-sm text-green-600">Polski Drób Premium - Eksporter Nr 1</p>
               </div>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#produkty" className="text-green-700 hover:text-green-900 font-medium transition-colors">Asortyment</a>
-              <a href="#o-nas" className="text-green-700 hover:text-green-900 font-medium transition-colors">O firmie</a>
-              <a href="#jakosc" className="text-green-700 hover:text-green-900 font-medium transition-colors">Jakość</a>
-              <a href="#certyfikaty" className="text-green-700 hover:text-green-900 font-medium transition-colors">Certyfikaty</a>
-              <a href="#kontakt" className="text-green-700 hover:text-green-900 font-medium transition-colors">Kontakt</a>
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#produkty" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.products')}</a>
+              <a href="#o-nas" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.about')}</a>
+              <a href="#jakosc" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.quality')}</a>
+              <a href="#certyfikaty" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.certificates')}</a>
+              <a href="#kontakt" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.contact')}</a>
+              <LanguageSwitcher />
             </div>
             <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-2">
-              Pobierz cennik
+              {t('nav.download_price')}
             </Button>
           </nav>
         </div>
@@ -43,25 +48,23 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <Badge className="bg-yellow-500 text-green-900 mb-6 px-4 py-2 text-lg font-bold">
-              Wiodący Eksporter w Polsce
+              {t('hero.badge')}
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Polski Drób<br />
-              <span className="text-yellow-300">Najwyższej Jakości</span>
+              {t('hero.title')}<br />
+              <span className="text-yellow-300">{t('hero.title_highlight')}</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto">
-              Specjalizujemy się w eksporcie świeżego i mrożonego mięsa drobiowego. 
-              Dostarczamy produkty najwyższej jakości do największych sieci handlowych, 
-              zakładów przetwórczych i importerów w ponad 40 krajach świata.
+              {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold px-8 py-4 text-lg">
                 <Factory className="mr-2 h-5 w-5" />
-                Sprawdź naszą ofertę
+                {t('hero.cta_offer')}
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 bg-transparent px-8 py-4 text-lg">
                 <Phone className="mr-2 h-5 w-5" />
-                +48 123 456 789
+                {t('hero.cta_phone')}
               </Button>
             </div>
             
@@ -69,19 +72,19 @@ const Index = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">20+</div>
-                <div className="text-green-100">lat doświadczenia</div>
+                <div className="text-green-100">{t('hero.stats.years')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">40+</div>
-                <div className="text-green-100">krajów eksportu</div>
+                <div className="text-green-100">{t('hero.stats.countries')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">50k</div>
-                <div className="text-green-100">ton rocznie</div>
+                <div className="text-green-100">{t('hero.stats.tons')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">99.8%</div>
-                <div className="text-green-100">zadowolonych klientów</div>
+                <div className="text-green-100">{t('hero.stats.satisfaction')}</div>
               </div>
             </div>
           </div>
@@ -97,9 +100,9 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-green-800 mb-4">Dlaczego wybierają nas?</h2>
+            <h2 className="text-4xl font-bold text-green-800 mb-4">{t('benefits.title')}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Jesteśmy liderem w eksporcie polskiego drobiu dzięki naszemu doświadczeniu i najwyższym standardom jakości
+              {t('benefits.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
@@ -107,29 +110,29 @@ const Index = () => {
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
                 <Shield className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">Pełna Kontrola Jakości</h3>
-              <p className="text-gray-600">Ścisła kontrola HACCP na każdym etapie produkcji. Własne laboratoria badawcze.</p>
+              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.quality.title')}</h3>
+              <p className="text-gray-600">{t('benefits.quality.desc')}</p>
             </div>
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
                 <Clock className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">Terminowość Dostaw</h3>
-              <p className="text-gray-600">Gwarantujemy dostawy zgodnie z harmonogramem. Własna flota transportowa.</p>
+              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.delivery.title')}</h3>
+              <p className="text-gray-600">{t('benefits.delivery.desc')}</p>
             </div>
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
                 <Users className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">Doświadczony Team</h3>
-              <p className="text-gray-600">Zespół ekspertów z 20-letnim doświadczeniem w eksporcie drobiu.</p>
+              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.team.title')}</h3>
+              <p className="text-gray-600">{t('benefits.team.desc')}</p>
             </div>
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
                 <Star className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">Konkurencyjne Ceny</h3>
-              <p className="text-gray-600">Najlepsze ceny przy zachowaniu najwyższej jakości produktów.</p>
+              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.price.title')}</h3>
+              <p className="text-gray-600">{t('benefits.price.desc')}</p>
             </div>
           </div>
         </div>
@@ -139,53 +142,52 @@ const Index = () => {
       <section id="produkty" className="py-24 bg-gradient-to-b from-green-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-green-800 mb-6">Pełny Asortyment Drobiowy</h2>
+            <h2 className="text-5xl font-bold text-green-800 mb-6">{t('products.title')}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Oferujemy kompletną gamę produktów drobiowych - od świeżego mięsa po produkty przetworzone. 
-              Wszystkie produkty pochodzą od certyfikowanych dostawców i są przetwarzane zgodnie z najwyższymi standardami UE.
+              {t('products.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">Świeże mięso</Badge>
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">Produkty mrożone</Badge>
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">Przetwory</Badge>
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">Private label</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.fresh')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.frozen')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.processed')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.private')}</Badge>
             </div>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <ProductCard 
-              title="Piersi z kurczaka bez kości" 
-              description="Premium filety bez kości i skóry. Dostępne w różnych wagach: 140-200g, 200-300g, powyżej 300g. Pakowane próżniowo." 
+              title={t('product.chicken_breast.title')}
+              description={t('product.chicken_breast.desc')}
               features={["Bez antybiotyków", "Klasa A", "Pakowanie próżniowe", "Shelf life 10 dni"]} 
               image="photo-1548550023-2bdb3c5beed7" 
             />
             <ProductCard 
-              title="Skrzydełka kurczaka" 
-              description="Świeże skrzydełka w różnych formatach: całe, 2-segmentowe, mid joints, drumettes. Różne kategorie wagowe." 
+              title={t('product.chicken_wings.title')}
+              description={t('product.chicken_wings.desc')}
               features={["Różne cięcia", "Świeże i mrożone", "Opakowania od 1kg do 15kg", "Export quality"]} 
               image="photo-1444731961956-751ed90baaa5" 
             />
             <ProductCard 
-              title="Ćwiartki kurczaka" 
-              description="Ćwiartki górne (skrzydło + pierś) i dolne (udo + podudzie). Idealne dla hurtowni i gastronomii." 
+              title={t('product.chicken_quarters.title')}
+              description={t('product.chicken_quarters.desc')}
               features={["Górne i dolne", "Różne wagi", "Opakowanie MAP", "Długa trwałość"]} 
               image="photo-1518191319892-1c2dcb9836c3" 
             />
             <ProductCard 
-              title="Kurczak cały" 
-              description="Kurczaki całe klasy A, waga 1000-2500g. Dostępne świeże i mrożone. Certyfikowane pochodzenie z polskich ferm." 
+              title={t('product.whole_chicken.title')}
+              description={t('product.whole_chicken.desc')}
               features={["Waga 1-2.5kg", "Klasa A premium", "Własne farmy", "Certyfikat pochodzenia"]} 
               image="photo-1504439904031-93ded9f93e4e" 
             />
             <ProductCard 
-              title="Podroby drobiowe" 
-              description="Wysokiej jakości podroby: serca, żołądki, wątróbki, szyje. Idealne do dalszego przetwórstwa." 
+              title={t('product.giblets.title')}
+              description={t('product.giblets.desc')}
               features={["Serca, żołądki, wątróbki", "Świeże i mrożone", "Kontrola weterynaryjna", "Pakowanie na zamówienie"]} 
               image="photo-1444665559562-dcea25ea8801" 
             />
             <ProductCard 
-              title="Produkty przetworzone" 
-              description="Gotowe produkty według specyfikacji klienta: nuggetsy, stripsy, kotlety. Możliwość private label." 
+              title={t('product.processed.title')}
+              description={t('product.processed.desc')}
               features={["Według receptur klienta", "Private label", "Różne panierki", "Kontrola jakości"]} 
               image="photo-1506905925346-21bda4d32df4" 
             />
@@ -193,10 +195,9 @@ const Index = () => {
 
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-green-800 mb-4">Specjalne Produkty na Zamówienie</h3>
+              <h3 className="text-3xl font-bold text-green-800 mb-4">{t('special.title')}</h3>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Przygotowujemy produkty według indywidualnych specyfikacji klientów. 
-                Oferujemy usługi private label oraz packaging zgodny z wymaganiami rynków docelowych.
+                {t('special.subtitle')}
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -204,29 +205,29 @@ const Index = () => {
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Factory className="h-8 w-8 text-green-600" />
                 </div>
-                <h4 className="font-bold text-green-800 mb-2">Własne Linie Produkcyjne</h4>
-                <p className="text-gray-600">Nowoczesne zakłady z certyfikatami EU</p>
+                <h4 className="font-bold text-green-800 mb-2">{t('special.production.title')}</h4>
+                <p className="text-gray-600">{t('special.production.desc')}</p>
               </div>
               <div className="text-center p-4">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-green-600" />
                 </div>
-                <h4 className="font-bold text-green-800 mb-2">Private Label</h4>
-                <p className="text-gray-600">Produkty pod marką klienta</p>
+                <h4 className="font-bold text-green-800 mb-2">{t('special.private.title')}</h4>
+                <p className="text-gray-600">{t('special.private.desc')}</p>
               </div>
               <div className="text-center p-4">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-green-600" />
                 </div>
-                <h4 className="font-bold text-green-800 mb-2">Export Worldwide</h4>
-                <p className="text-gray-600">Dostawy do 40+ krajów</p>
+                <h4 className="font-bold text-green-800 mb-2">{t('special.export.title')}</h4>
+                <p className="text-gray-600">{t('special.export.desc')}</p>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-12">
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-12 py-4 text-lg">
-              Pobierz pełny katalog produktów (PDF)
+              {t('special.cta')}
             </Button>
           </div>
         </div>
@@ -237,11 +238,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-green-800 mb-6">Najwyższe Standardy Jakości</h2>
+              <h2 className="text-4xl font-bold text-green-800 mb-6">{t('quality.title')}</h2>
               <p className="text-lg text-gray-700 mb-8">
-                Nasza filozofia opiera się na bezwzględnym przestrzeganiu najwyższych standardów jakości 
-                i bezpieczeństwa żywności. Współpracujemy wyłącznie z certyfikowanymi farmami i zakładami, 
-                które spełniają surowe wymagania europejskie.
+                {t('quality.description')}
               </p>
               
               <div className="space-y-6">
@@ -250,8 +249,8 @@ const Index = () => {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">Kontrola na każdym etapie</h4>
-                    <p className="text-gray-600">Od farmy do finalnego produktu - wielostopniowa kontrola jakości</p>
+                    <h4 className="font-bold text-green-800 mb-2">{t('quality.control.title')}</h4>
+                    <p className="text-gray-600">{t('quality.control.desc')}</p>
                   </div>
                 </div>
                 
@@ -260,8 +259,8 @@ const Index = () => {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">Własne laboratoria</h4>
-                    <p className="text-gray-600">Badania mikrobiologiczne i chemiczne w akredytowanych laboratoriach</p>
+                    <h4 className="font-bold text-green-800 mb-2">{t('quality.lab.title')}</h4>
+                    <p className="text-gray-600">{t('quality.lab.desc')}</p>
                   </div>
                 </div>
                 
@@ -270,8 +269,8 @@ const Index = () => {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">Chłodny łańcuch dostaw</h4>
-                    <p className="text-gray-600">Nieprzerwany łańcuch chłodniczy od uboju do klienta końcowego</p>
+                    <h4 className="font-bold text-green-800 mb-2">{t('quality.cold.title')}</h4>
+                    <p className="text-gray-600">{t('quality.cold.desc')}</p>
                   </div>
                 </div>
                 
@@ -280,8 +279,8 @@ const Index = () => {
                     <CheckCircle className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">Śledzenie pochodzenia</h4>
-                    <p className="text-gray-600">Pełna traceability - od farmy do półki sklepowej</p>
+                    <h4 className="font-bold text-green-800 mb-2">{t('quality.trace.title')}</h4>
+                    <p className="text-gray-600">{t('quality.trace.desc')}</p>
                   </div>
                 </div>
               </div>
@@ -293,8 +292,8 @@ const Index = () => {
                   <div className="w-32 h-32 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mb-8">
                     <Shield className="h-16 w-16 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-green-800 mb-4">100% Bezpieczeństwo</h3>
-                  <p className="text-green-700 text-lg">Gwarancja najwyższej jakości</p>
+                  <h3 className="text-3xl font-bold text-green-800 mb-4">{t('quality.guarantee')}</h3>
+                  <p className="text-green-700 text-lg">{t('quality.guarantee.sub')}</p>
                 </div>
               </div>
             </div>
@@ -306,50 +305,49 @@ const Index = () => {
       <section id="certyfikaty" className="py-24 bg-gradient-to-b from-green-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-green-800 mb-6">Certyfikaty i Akredytacje</h2>
+            <h2 className="text-4xl font-bold text-green-800 mb-6">{t('cert.title')}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Posiadamy wszystkie niezbędne certyfikaty i akredytacje wymagane do eksportu produktów drobiowych. 
-              Nasze zakłady są regularnie kontrolowane przez polskie i międzynarodowe organy certyfikujące.
+              {t('cert.subtitle')}
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <CertificationBadge 
               name="HACCP" 
-              description="System analizy zagrożeń i krytycznych punktów kontroli zgodny z wymogami UE" 
+              description={t('cert.haccp.desc')}
               icon={<Shield className="h-12 w-12 text-green-600" />} 
             />
             <CertificationBadge 
               name="ISO 22000" 
-              description="Międzynarodowy standard systemu zarządzania bezpieczeństwem żywności" 
+              description={t('cert.iso.desc')}
               icon={<Award className="h-12 w-12 text-green-600" />} 
             />
             <CertificationBadge 
               name="GlobalG.A.P." 
-              description="Globalne standardy dobrej praktyki rolniczej i hodowlanej" 
+              description={t('cert.gap.desc')}
               icon={<CheckCircle className="h-12 w-12 text-green-600" />} 
             />
             <CertificationBadge 
               name="IFS Food" 
-              description="International Featured Standards dla bezpieczeństwa i jakości żywności" 
+              description={t('cert.ifs.desc')}
               icon={<Star className="h-12 w-12 text-green-600" />} 
             />
           </div>
           
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
-            <h3 className="text-2xl font-bold text-green-800 mb-6 text-center">Dodatkowe Certyfikaty Eksportowe</h3>
+            <h3 className="text-2xl font-bold text-green-800 mb-6 text-center">{t('cert.additional.title')}</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <h4 className="font-bold text-green-800 mb-2">Certyfikat Weterynaryjny</h4>
-                <p className="text-gray-600">Wydawany przez PIW dla każdej partii eksportowej</p>
+                <h4 className="font-bold text-green-800 mb-2">{t('cert.vet.title')}</h4>
+                <p className="text-gray-600">{t('cert.vet.desc')}</p>
               </div>
               <div className="text-center">
-                <h4 className="font-bold text-green-800 mb-2">Halal Certification</h4>
-                <p className="text-gray-600">Certyfikacja dla rynków muzułmańskich</p>
+                <h4 className="font-bold text-green-800 mb-2">{t('cert.halal.title')}</h4>
+                <p className="text-gray-600">{t('cert.halal.desc')}</p>
               </div>
               <div className="text-center">
-                <h4 className="font-bold text-green-800 mb-2">EU Health Certificate</h4>
-                <p className="text-gray-600">Certyfikat zdrowia dla eksportu w ramach UE</p>
+                <h4 className="font-bold text-green-800 mb-2">{t('cert.eu.title')}</h4>
+                <p className="text-gray-600">{t('cert.eu.desc')}</p>
               </div>
             </div>
           </div>
@@ -361,38 +359,35 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-green-800 mb-6">Lider Eksportu Polskiego Drobiu</h2>
+              <h2 className="text-4xl font-bold text-green-800 mb-6">{t('about.title')}</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Masovia Poultry to wiodący eksporter polskiego drobiu z ponad 20-letnim doświadczeniem na rynku międzynarodowym. 
-                Jesteśmy dumni z tego, że polski drób cieszy się uznaniem na całym świecie dzięki naszej pracy i zaangażowaniu.
+                {t('about.description1')}
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Współpracujemy z największymi sieciami handlowymi w Europie, Azji i na Bliskim Wschodzie. 
-                Nasze produkty trafiają do sklepów w Niemczech, Francji, Wielkiej Brytanii, Holandii, 
-                krajach Bałkańskich oraz na rynki azjatyckie.
+                {t('about.description2')}
               </p>
               
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center p-6 bg-green-50 rounded-xl">
                   <h3 className="text-4xl font-bold text-green-800">50,000</h3>
-                  <p className="text-gray-600 font-medium">ton rocznie</p>
+                  <p className="text-gray-600 font-medium">{t('about.stats.tons')}</p>
                 </div>
                 <div className="text-center p-6 bg-green-50 rounded-xl">
                   <h3 className="text-4xl font-bold text-green-800">40+</h3>
-                  <p className="text-gray-600 font-medium">krajów eksportu</p>
+                  <p className="text-gray-600 font-medium">{t('about.stats.countries')}</p>
                 </div>
                 <div className="text-center p-6 bg-green-50 rounded-xl">
                   <h3 className="text-4xl font-bold text-green-800">1000+</h3>
-                  <p className="text-gray-600 font-medium">zadowolonych klientów</p>
+                  <p className="text-gray-600 font-medium">{t('about.stats.clients')}</p>
                 </div>
                 <div className="text-center p-6 bg-green-50 rounded-xl">
                   <h3 className="text-4xl font-bold text-green-800">99.8%</h3>
-                  <p className="text-gray-600 font-medium">punktualność dostaw</p>
+                  <p className="text-gray-600 font-medium">{t('about.stats.delivery')}</p>
                 </div>
               </div>
 
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4">
-                Poznaj naszą historię
+                {t('about.cta')}
               </Button>
             </div>
             
@@ -402,9 +397,9 @@ const Index = () => {
                   <div className="w-40 h-40 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-8">
                     <span className="text-white font-bold text-5xl">MP</span>
                   </div>
-                  <h3 className="text-3xl font-bold text-green-800 mb-4">Masovia Poultry</h3>
-                  <p className="text-green-600 text-lg">Polski drób premium od 2004</p>
-                  <p className="text-green-600 mt-2">Eksport do całego świata</p>
+                  <h3 className="text-3xl font-bold text-green-800 mb-4">{t('about.company')}</h3>
+                  <p className="text-green-600 text-lg">{t('about.tagline')}</p>
+                  <p className="text-green-600 mt-2">{t('about.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -416,21 +411,20 @@ const Index = () => {
       <section id="kontakt" className="py-24 bg-gradient-to-b from-green-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-green-800 mb-6">Rozpocznij Współpracę</h2>
+            <h2 className="text-4xl font-bold text-green-800 mb-6">{t('contact.title')}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              Skontaktuj się z nami już dziś i otrzymaj spersonalizowaną ofertę dostosowaną do Twoich potrzeb. 
-              Nasz zespół ekspertów odpowie na wszystkie pytania i pomoże wybrać najlepsze produkty.
+              {t('contact.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge className="bg-green-600 text-white px-4 py-2">Odpowiedź w 24h</Badge>
-              <Badge className="bg-green-600 text-white px-4 py-2">Darmowe próbki</Badge>
-              <Badge className="bg-green-600 text-white px-4 py-2">Konkurencyjne ceny</Badge>
+              <Badge className="bg-green-600 text-white px-4 py-2">{t('contact.badge.response')}</Badge>
+              <Badge className="bg-green-600 text-white px-4 py-2">{t('contact.badge.samples')}</Badge>
+              <Badge className="bg-green-600 text-white px-4 py-2">{t('contact.badge.prices')}</Badge>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h3 className="text-3xl font-bold text-green-800 mb-8">Dane kontaktowe</h3>
+              <h3 className="text-3xl font-bold text-green-800 mb-8">{t('contact.info.title')}</h3>
               
               <div className="space-y-8">
                 <div className="flex items-start space-x-6">
@@ -438,9 +432,9 @@ const Index = () => {
                     <Phone className="h-8 w-8 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-green-800 mb-2">Telefon</h4>
-                    <p className="text-gray-600 text-lg">+48 123 456 789 (Export Manager)</p>
-                    <p className="text-gray-600 text-lg">+48 987 654 321 (Sales Director)</p>
+                    <h4 className="font-bold text-xl text-green-800 mb-2">{t('contact.phone.title')}</h4>
+                    <p className="text-gray-600 text-lg">{t('contact.phone.export')}</p>
+                    <p className="text-gray-600 text-lg">{t('contact.phone.sales')}</p>
                   </div>
                 </div>
                 
@@ -449,7 +443,7 @@ const Index = () => {
                     <Mail className="h-8 w-8 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-green-800 mb-2">Email</h4>
+                    <h4 className="font-bold text-xl text-green-800 mb-2">{t('contact.email.title')}</h4>
                     <p className="text-gray-600 text-lg">export@masoviapoultry.pl</p>
                     <p className="text-gray-600 text-lg">sales@masoviapoultry.pl</p>
                   </div>
@@ -460,22 +454,22 @@ const Index = () => {
                     <MapPin className="h-8 w-8 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-green-800 mb-2">Siedziba główna</h4>
-                    <p className="text-gray-600 text-lg">ul. Przemysłowa 15</p>
-                    <p className="text-gray-600 text-lg">05-800 Pruszków, Polska</p>
+                    <h4 className="font-bold text-xl text-green-800 mb-2">{t('contact.address.title')}</h4>
+                    <p className="text-gray-600 text-lg">{t('contact.address.street')}</p>
+                    <p className="text-gray-600 text-lg">{t('contact.address.city')}</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-12 p-8 bg-green-50 rounded-2xl">
-                <h4 className="font-bold text-xl text-green-800 mb-4">Godziny pracy</h4>
+                <h4 className="font-bold text-xl text-green-800 mb-4">{t('contact.hours.title')}</h4>
                 <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Poniedziałek - Piątek:</span> 8:00 - 18:00</p>
-                  <p><span className="font-medium">Sobota:</span> 9:00 - 14:00</p>
-                  <p><span className="font-medium">Niedziela:</span> Zamknięte</p>
+                  <p>{t('contact.hours.weekdays')}</p>
+                  <p>{t('contact.hours.saturday')}</p>
+                  <p>{t('contact.hours.sunday')}</p>
                 </div>
                 <p className="mt-4 text-sm text-green-700 font-medium">
-                  W przypadku pilnych spraw eksportowych jesteśmy dostępni 24/7
+                  {t('contact.hours.urgent')}
                 </p>
               </div>
             </div>
@@ -488,33 +482,32 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-8">Dołącz do Grona Naszych Partnerów</h2>
+          <h2 className="text-5xl font-bold mb-8">{t('cta.title')}</h2>
           <p className="text-xl mb-12 max-w-4xl mx-auto text-green-100">
-            Współpracujemy z największymi importerami, sieciami handlowymi i zakładami przetwórczymi w Europie. 
-            Polski drób premium to gwarancja sukcesu na Twoim rynku.
+            {t('cta.subtitle')}
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-300 mb-2">Tesco</div>
-              <p className="text-green-100">Sieć handlowa - UK</p>
+              <p className="text-green-100">{t('cta.tesco')}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-300 mb-2">Auchan</div>
-              <p className="text-green-100">Hipermarkety - Europa</p>
+              <p className="text-green-100">{t('cta.auchan')}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-300 mb-2">Metro</div>
-              <p className="text-green-100">Cash & Carry - EMEA</p>
+              <p className="text-green-100">{t('cta.metro')}</p>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold px-12 py-4 text-lg">
-              Otrzymaj ofertę specjalną
+              {t('cta.special_offer')}
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 bg-transparent px-12 py-4 text-lg">
-              Umów spotkanie biznesowe
+              {t('cta.meeting')}
             </Button>
           </div>
         </div>
@@ -532,37 +525,37 @@ const Index = () => {
                 <span className="text-2xl font-bold">Masovia Poultry</span>
               </div>
               <p className="text-green-200 mb-4">
-                Wiodący eksporter najwyższej jakości polskiego drobiu na rynki międzynarodowe.
+                {t('footer.tagline')}
               </p>
-              <p className="text-green-300 font-bold">Polski drób premium od 2004</p>
+              <p className="text-green-300 font-bold">{t('footer.company_info')}</p>
             </div>
             
             <div>
-              <h4 className="font-bold mb-6 text-lg">Produkty</h4>
+              <h4 className="font-bold mb-6 text-lg">{t('footer.products.title')}</h4>
               <ul className="space-y-3 text-green-200">
-                <li>Piersi z kurczaka</li>
-                <li>Skrzydełka kurczaka</li>
-                <li>Ćwiartki kurczaka</li>
-                <li>Kurczak cały</li>
-                <li>Podroby drobiowe</li>
-                <li>Produkty przetworzone</li>
+                <li>{t('footer.products.breast')}</li>
+                <li>{t('footer.products.wings')}</li>
+                <li>{t('footer.products.quarters')}</li>
+                <li>{t('footer.products.whole')}</li>
+                <li>{t('footer.products.giblets')}</li>
+                <li>{t('footer.products.processed')}</li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-6 text-lg">Firma</h4>
+              <h4 className="font-bold mb-6 text-lg">{t('footer.company.title')}</h4>
               <ul className="space-y-3 text-green-200">
-                <li>O nas</li>
-                <li>Historia firmy</li>
-                <li>Certyfikaty jakości</li>
-                <li>Nasze farmy</li>
-                <li>Kariera</li>
-                <li>Aktualności</li>
+                <li>{t('footer.company.about')}</li>
+                <li>{t('footer.company.history')}</li>
+                <li>{t('footer.company.certificates')}</li>
+                <li>{t('footer.company.farms')}</li>
+                <li>{t('footer.company.career')}</li>
+                <li>{t('footer.company.news')}</li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-6 text-lg">Kontakt</h4>
+              <h4 className="font-bold mb-6 text-lg">{t('footer.contact.title')}</h4>
               <ul className="space-y-3 text-green-200">
                 <li><Phone className="inline h-4 w-4 mr-2" />+48 123 456 789</li>
                 <li><Mail className="inline h-4 w-4 mr-2" />export@masoviapoultry.pl</li>
@@ -573,7 +566,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-green-800 pt-8 text-center text-green-200">
-            <p>© 2024 Masovia Poultry. Wszystkie prawa zastrzeżone. | Polski drób premium | Eksport worldwide</p>
+            <p>{t('footer.copyright')}</p>
           </div>
         </div>
       </footer>
