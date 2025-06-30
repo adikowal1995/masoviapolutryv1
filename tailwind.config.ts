@@ -65,6 +65,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom sage green colors
+				sage: {
+					50: '#f7f8f4',
+					100: '#e9edc9',
+					200: '#dde3b5',
+					300: '#ccd5ae',
+					400: '#b8c494',
+					500: '#a4b380',
+					600: '#8e9e6b',
+					700: '#78895a',
+					800: '#63714a',
+					900: '#4f5a3c'
 				}
 			},
 			borderRadius: {

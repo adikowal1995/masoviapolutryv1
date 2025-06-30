@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,29 +12,29 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Index = () => {
   const { t } = useLanguage();
 
-  return <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+  return <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Header/Navigation */}
-      <header className="bg-white shadow-sm border-b border-green-100 sticky top-0 z-50">
+      <header className="bg-white shadow-sm border-b border-sage-100 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-sage-300 to-sage-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">MP</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-green-800">Masovia Poultry</h1>
-                <p className="text-sm text-green-600">Polski Drób Premium - Eksporter Nr 1</p>
+                <h1 className="text-2xl font-bold text-sage-800">Masovia Poultry</h1>
+                <p className="text-sm text-sage-600">Polski Drób Premium - Eksporter Nr 1</p>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#produkty" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.products')}</a>
-              <a href="#o-nas" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.about')}</a>
-              <a href="#jakosc" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.quality')}</a>
-              <a href="#certyfikaty" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.certificates')}</a>
-              <a href="#kontakt" className="text-green-700 hover:text-green-900 font-medium transition-colors">{t('nav.contact')}</a>
+              <a href="#produkty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.products')}</a>
+              <a href="#o-nas" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.about')}</a>
+              <a href="#jakosc" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.quality')}</a>
+              <a href="#certyfikaty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.certificates')}</a>
+              <a href="#kontakt" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.contact')}</a>
               <LanguageSwitcher />
             </div>
-            <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-2">
+            <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-6 py-2">
               {t('nav.download_price')}
             </Button>
           </nav>
@@ -43,26 +42,26 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white overflow-hidden">
+      <section className="relative py-24 bg-gradient-to-r from-sage-300 via-sage-400 to-sage-500 text-sage-900 overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <Badge className="bg-yellow-500 text-green-900 mb-6 px-4 py-2 text-lg font-bold">
+            <Badge className="bg-yellow-500 text-sage-900 mb-6 px-4 py-2 text-lg font-bold">
               {t('hero.badge')}
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
               {t('hero.title')}<br />
               <span className="text-yellow-300">{t('hero.title_highlight')}</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-sage-100 max-w-4xl mx-auto">
               {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold px-8 py-4 text-lg">
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-sage-900 font-bold px-8 py-4 text-lg">
                 <Factory className="mr-2 h-5 w-5" />
                 {t('hero.cta_offer')}
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 bg-transparent px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-sage-800 bg-transparent px-8 py-4 text-lg">
                 <Phone className="mr-2 h-5 w-5" />
                 {t('hero.cta_phone')}
               </Button>
@@ -72,19 +71,19 @@ const Index = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">20+</div>
-                <div className="text-green-100">{t('hero.stats.years')}</div>
+                <div className="text-sage-100">{t('hero.stats.years')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">40+</div>
-                <div className="text-green-100">{t('hero.stats.countries')}</div>
+                <div className="text-sage-100">{t('hero.stats.countries')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">50k</div>
-                <div className="text-green-100">{t('hero.stats.tons')}</div>
+                <div className="text-sage-100">{t('hero.stats.tons')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">99.8%</div>
-                <div className="text-green-100">{t('hero.stats.satisfaction')}</div>
+                <div className="text-sage-100">{t('hero.stats.satisfaction')}</div>
               </div>
             </div>
           </div>
@@ -100,38 +99,38 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-green-800 mb-4">{t('benefits.title')}</h2>
+            <h2 className="text-4xl font-bold text-sage-800 mb-4">{t('benefits.title')}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t('benefits.subtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
-                <Shield className="h-10 w-10 text-green-600" />
+              <div className="w-20 h-20 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage-200">
+                <Shield className="h-10 w-10 text-sage-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.quality.title')}</h3>
+              <h3 className="font-bold text-xl mb-3 text-sage-800">{t('benefits.quality.title')}</h3>
               <p className="text-gray-600">{t('benefits.quality.desc')}</p>
             </div>
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
-                <Clock className="h-10 w-10 text-green-600" />
+              <div className="w-20 h-20 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage-200">
+                <Clock className="h-10 w-10 text-sage-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.delivery.title')}</h3>
+              <h3 className="font-bold text-xl mb-3 text-sage-800">{t('benefits.delivery.title')}</h3>
               <p className="text-gray-600">{t('benefits.delivery.desc')}</p>
             </div>
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
-                <Users className="h-10 w-10 text-green-600" />
+              <div className="w-20 h-20 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage-200">
+                <Users className="h-10 w-10 text-sage-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.team.title')}</h3>
+              <h3 className="font-bold text-xl mb-3 text-sage-800">{t('benefits.team.title')}</h3>
               <p className="text-gray-600">{t('benefits.team.desc')}</p>
             </div>
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200">
-                <Star className="h-10 w-10 text-green-600" />
+              <div className="w-20 h-20 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sage-200">
+                <Star className="h-10 w-10 text-sage-600" />
               </div>
-              <h3 className="font-bold text-xl mb-3 text-green-800">{t('benefits.price.title')}</h3>
+              <h3 className="font-bold text-xl mb-3 text-sage-800">{t('benefits.price.title')}</h3>
               <p className="text-gray-600">{t('benefits.price.desc')}</p>
             </div>
           </div>
@@ -139,18 +138,18 @@ const Index = () => {
       </section>
 
       {/* Products Section */}
-      <section id="produkty" className="py-24 bg-gradient-to-b from-green-50 to-white">
+      <section id="produkty" className="py-24 bg-gradient-to-b from-sage-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-green-800 mb-6">{t('products.title')}</h2>
+            <h2 className="text-5xl font-bold text-sage-800 mb-6">{t('products.title')}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
               {t('products.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.fresh')}</Badge>
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.frozen')}</Badge>
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.processed')}</Badge>
-              <Badge variant="outline" className="px-4 py-2 border-green-300 text-green-700">{t('products.badge.private')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-sage-300 text-sage-700">{t('products.badge.fresh')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-sage-300 text-sage-700">{t('products.badge.frozen')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-sage-300 text-sage-700">{t('products.badge.processed')}</Badge>
+              <Badge variant="outline" className="px-4 py-2 border-sage-300 text-sage-700">{t('products.badge.private')}</Badge>
             </div>
           </div>
           
@@ -193,40 +192,40 @@ const Index = () => {
             />
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-sage-100">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-green-800 mb-4">{t('special.title')}</h3>
+              <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('special.title')}</h3>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 {t('special.subtitle')}
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center p-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Factory className="h-8 w-8 text-green-600" />
+                <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Factory className="h-8 w-8 text-sage-600" />
                 </div>
-                <h4 className="font-bold text-green-800 mb-2">{t('special.production.title')}</h4>
+                <h4 className="font-bold text-sage-800 mb-2">{t('special.production.title')}</h4>
                 <p className="text-gray-600">{t('special.production.desc')}</p>
               </div>
               <div className="text-center p-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-green-600" />
+                <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="h-8 w-8 text-sage-600" />
                 </div>
-                <h4 className="font-bold text-green-800 mb-2">{t('special.private.title')}</h4>
+                <h4 className="font-bold text-sage-800 mb-2">{t('special.private.title')}</h4>
                 <p className="text-gray-600">{t('special.private.desc')}</p>
               </div>
               <div className="text-center p-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="h-8 w-8 text-green-600" />
+                <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="h-8 w-8 text-sage-600" />
                 </div>
-                <h4 className="font-bold text-green-800 mb-2">{t('special.export.title')}</h4>
+                <h4 className="font-bold text-sage-800 mb-2">{t('special.export.title')}</h4>
                 <p className="text-gray-600">{t('special.export.desc')}</p>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-12 py-4 text-lg">
+            <Button size="lg" className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-12 py-4 text-lg">
               {t('special.cta')}
             </Button>
           </div>
@@ -238,48 +237,48 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-green-800 mb-6">{t('quality.title')}</h2>
+              <h2 className="text-4xl font-bold text-sage-800 mb-6">{t('quality.title')}</h2>
               <p className="text-lg text-gray-700 mb-8">
                 {t('quality.description')}
               </p>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
+                  <div className="w-8 h-8 bg-sage-100 rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="h-5 w-5 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">{t('quality.control.title')}</h4>
+                    <h4 className="font-bold text-sage-800 mb-2">{t('quality.control.title')}</h4>
                     <p className="text-gray-600">{t('quality.control.desc')}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
+                  <div className="w-8 h-8 bg-sage-100 rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="h-5 w-5 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">{t('quality.lab.title')}</h4>
+                    <h4 className="font-bold text-sage-800 mb-2">{t('quality.lab.title')}</h4>
                     <p className="text-gray-600">{t('quality.lab.desc')}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
+                  <div className="w-8 h-8 bg-sage-100 rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="h-5 w-5 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">{t('quality.cold.title')}</h4>
+                    <h4 className="font-bold text-sage-800 mb-2">{t('quality.cold.title')}</h4>
                     <p className="text-gray-600">{t('quality.cold.desc')}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
+                  <div className="w-8 h-8 bg-sage-100 rounded-full flex items-center justify-center mt-1">
+                    <CheckCircle className="h-5 w-5 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-green-800 mb-2">{t('quality.trace.title')}</h4>
+                    <h4 className="font-bold text-sage-800 mb-2">{t('quality.trace.title')}</h4>
                     <p className="text-gray-600">{t('quality.trace.desc')}</p>
                   </div>
                 </div>
@@ -287,13 +286,13 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-3xl p-8">
+              <div className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl p-8">
                 <div className="h-full flex flex-col justify-center items-center text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mb-8">
+                  <div className="w-32 h-32 bg-gradient-to-br from-sage-300 to-sage-500 rounded-full flex items-center justify-center mb-8">
                     <Shield className="h-16 w-16 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-green-800 mb-4">{t('quality.guarantee')}</h3>
-                  <p className="text-green-700 text-lg">{t('quality.guarantee.sub')}</p>
+                  <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('quality.guarantee')}</h3>
+                  <p className="text-sage-700 text-lg">{t('quality.guarantee.sub')}</p>
                 </div>
               </div>
             </div>
@@ -302,10 +301,10 @@ const Index = () => {
       </section>
 
       {/* Certifications */}
-      <section id="certyfikaty" className="py-24 bg-gradient-to-b from-green-50 to-white">
+      <section id="certyfikaty" className="py-24 bg-gradient-to-b from-sage-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-green-800 mb-6">{t('cert.title')}</h2>
+            <h2 className="text-4xl font-bold text-sage-800 mb-6">{t('cert.title')}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               {t('cert.subtitle')}
             </p>
@@ -315,38 +314,38 @@ const Index = () => {
             <CertificationBadge 
               name="HACCP" 
               description={t('cert.haccp.desc')}
-              icon={<Shield className="h-12 w-12 text-green-600" />} 
+              icon={<Shield className="h-12 w-12 text-sage-600" />} 
             />
             <CertificationBadge 
               name="ISO 22000" 
               description={t('cert.iso.desc')}
-              icon={<Award className="h-12 w-12 text-green-600" />} 
+              icon={<Award className="h-12 w-12 text-sage-600" />} 
             />
             <CertificationBadge 
               name="GlobalG.A.P." 
               description={t('cert.gap.desc')}
-              icon={<CheckCircle className="h-12 w-12 text-green-600" />} 
+              icon={<CheckCircle className="h-12 w-12 text-sage-600" />} 
             />
             <CertificationBadge 
               name="IFS Food" 
               description={t('cert.ifs.desc')}
-              icon={<Star className="h-12 w-12 text-green-600" />} 
+              icon={<Star className="h-12 w-12 text-sage-600" />} 
             />
           </div>
           
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
-            <h3 className="text-2xl font-bold text-green-800 mb-6 text-center">{t('cert.additional.title')}</h3>
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-sage-100">
+            <h3 className="text-2xl font-bold text-sage-800 mb-6 text-center">{t('cert.additional.title')}</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <h4 className="font-bold text-green-800 mb-2">{t('cert.vet.title')}</h4>
+                <h4 className="font-bold text-sage-800 mb-2">{t('cert.vet.title')}</h4>
                 <p className="text-gray-600">{t('cert.vet.desc')}</p>
               </div>
               <div className="text-center">
-                <h4 className="font-bold text-green-800 mb-2">{t('cert.halal.title')}</h4>
+                <h4 className="font-bold text-sage-800 mb-2">{t('cert.halal.title')}</h4>
                 <p className="text-gray-600">{t('cert.halal.desc')}</p>
               </div>
               <div className="text-center">
-                <h4 className="font-bold text-green-800 mb-2">{t('cert.eu.title')}</h4>
+                <h4 className="font-bold text-sage-800 mb-2">{t('cert.eu.title')}</h4>
                 <p className="text-gray-600">{t('cert.eu.desc')}</p>
               </div>
             </div>
@@ -359,7 +358,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-green-800 mb-6">{t('about.title')}</h2>
+              <h2 className="text-4xl font-bold text-sage-800 mb-6">{t('about.title')}</h2>
               <p className="text-lg text-gray-700 mb-6">
                 {t('about.description1')}
               </p>
@@ -368,38 +367,38 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-green-800">50,000</h3>
+                <div className="text-center p-6 bg-sage-50 rounded-xl">
+                  <h3 className="text-4xl font-bold text-sage-800">50,000</h3>
                   <p className="text-gray-600 font-medium">{t('about.stats.tons')}</p>
                 </div>
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-green-800">40+</h3>
+                <div className="text-center p-6 bg-sage-50 rounded-xl">
+                  <h3 className="text-4xl font-bold text-sage-800">40+</h3>
                   <p className="text-gray-600 font-medium">{t('about.stats.countries')}</p>
                 </div>
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-green-800">1000+</h3>
+                <div className="text-center p-6 bg-sage-50 rounded-xl">
+                  <h3 className="text-4xl font-bold text-sage-800">1000+</h3>
                   <p className="text-gray-600 font-medium">{t('about.stats.clients')}</p>
                 </div>
-                <div className="text-center p-6 bg-green-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-green-800">99.8%</h3>
+                <div className="text-center p-6 bg-sage-50 rounded-xl">
+                  <h3 className="text-4xl font-bold text-sage-800">99.8%</h3>
                   <p className="text-gray-600 font-medium">{t('about.stats.delivery')}</p>
                 </div>
               </div>
 
-              <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4">
+              <Button size="lg" className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-8 py-4">
                 {t('about.cta')}
               </Button>
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-3xl flex items-center justify-center p-8">
+              <div className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl flex items-center justify-center p-8">
                 <div className="text-center">
-                  <div className="w-40 h-40 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-8">
+                  <div className="w-40 h-40 bg-gradient-to-br from-sage-300 to-sage-500 rounded-full flex items-center justify-center mx-auto mb-8">
                     <span className="text-white font-bold text-5xl">MP</span>
                   </div>
-                  <h3 className="text-3xl font-bold text-green-800 mb-4">{t('about.company')}</h3>
-                  <p className="text-green-600 text-lg">{t('about.tagline')}</p>
-                  <p className="text-green-600 mt-2">{t('about.subtitle')}</p>
+                  <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('about.company')}</h3>
+                  <p className="text-sage-600 text-lg">{t('about.tagline')}</p>
+                  <p className="text-sage-600 mt-2">{t('about.subtitle')}</p>
                 </div>
               </div>
             </div>
@@ -408,67 +407,67 @@ const Index = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section id="kontakt" className="py-24 bg-gradient-to-b from-green-50 to-white">
+      <section id="kontakt" className="py-24 bg-gradient-to-b from-sage-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-green-800 mb-6">{t('contact.title')}</h2>
+            <h2 className="text-4xl font-bold text-sage-800 mb-6">{t('contact.title')}</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
               {t('contact.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge className="bg-green-600 text-white px-4 py-2">{t('contact.badge.response')}</Badge>
-              <Badge className="bg-green-600 text-white px-4 py-2">{t('contact.badge.samples')}</Badge>
-              <Badge className="bg-green-600 text-white px-4 py-2">{t('contact.badge.prices')}</Badge>
+              <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.response')}</Badge>
+              <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.samples')}</Badge>
+              <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.prices')}</Badge>
             </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h3 className="text-3xl font-bold text-green-800 mb-8">{t('contact.info.title')}</h3>
+              <h3 className="text-3xl font-bold text-sage-800 mb-8">{t('contact.info.title')}</h3>
               
               <div className="space-y-8">
                 <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Phone className="h-8 w-8 text-green-600" />
+                  <div className="w-16 h-16 bg-sage-100 rounded-xl flex items-center justify-center">
+                    <Phone className="h-8 w-8 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-green-800 mb-2">{t('contact.phone.title')}</h4>
+                    <h4 className="font-bold text-xl text-sage-800 mb-2">{t('contact.phone.title')}</h4>
                     <p className="text-gray-600 text-lg">{t('contact.phone.export')}</p>
                     <p className="text-gray-600 text-lg">{t('contact.phone.sales')}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center">
-                    <Mail className="h-8 w-8 text-green-600" />
+                  <div className="w-16 h-16 bg-sage-100 rounded-xl flex items-center justify-center">
+                    <Mail className="h-8 w-8 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-green-800 mb-2">{t('contact.email.title')}</h4>
+                    <h4 className="font-bold text-xl text-sage-800 mb-2">{t('contact.email.title')}</h4>
                     <p className="text-gray-600 text-lg">export@masoviapoultry.pl</p>
                     <p className="text-gray-600 text-lg">sales@masoviapoultry.pl</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center">
-                    <MapPin className="h-8 w-8 text-green-600" />
+                  <div className="w-16 h-16 bg-sage-100 rounded-xl flex items-center justify-center">
+                    <MapPin className="h-8 w-8 text-sage-600" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-xl text-green-800 mb-2">{t('contact.address.title')}</h4>
+                    <h4 className="font-bold text-xl text-sage-800 mb-2">{t('contact.address.title')}</h4>
                     <p className="text-gray-600 text-lg">{t('contact.address.street')}</p>
                     <p className="text-gray-600 text-lg">{t('contact.address.city')}</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12 p-8 bg-green-50 rounded-2xl">
-                <h4 className="font-bold text-xl text-green-800 mb-4">{t('contact.hours.title')}</h4>
+              <div className="mt-12 p-8 bg-sage-50 rounded-2xl">
+                <h4 className="font-bold text-xl text-sage-800 mb-4">{t('contact.hours.title')}</h4>
                 <div className="space-y-2 text-gray-700">
                   <p>{t('contact.hours.weekdays')}</p>
                   <p>{t('contact.hours.saturday')}</p>
                   <p>{t('contact.hours.sunday')}</p>
                 </div>
-                <p className="mt-4 text-sm text-green-700 font-medium">
+                <p className="mt-4 text-sm text-sage-700 font-medium">
                   {t('contact.hours.urgent')}
                 </p>
               </div>
@@ -480,33 +479,33 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white">
+      <section className="py-24 bg-gradient-to-r from-sage-300 via-sage-400 to-sage-500 text-sage-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-8">{t('cta.title')}</h2>
-          <p className="text-xl mb-12 max-w-4xl mx-auto text-green-100">
+          <h2 className="text-5xl font-bold mb-8 text-white">{t('cta.title')}</h2>
+          <p className="text-xl mb-12 max-w-4xl mx-auto text-sage-100">
             {t('cta.subtitle')}
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-300 mb-2">Tesco</div>
-              <p className="text-green-100">{t('cta.tesco')}</p>
+              <p className="text-sage-100">{t('cta.tesco')}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-300 mb-2">Auchan</div>
-              <p className="text-green-100">{t('cta.auchan')}</p>
+              <p className="text-sage-100">{t('cta.auchan')}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-300 mb-2">Metro</div>
-              <p className="text-green-100">{t('cta.metro')}</p>
+              <p className="text-sage-100">{t('cta.metro')}</p>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-green-900 font-bold px-12 py-4 text-lg">
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-sage-900 font-bold px-12 py-4 text-lg">
               {t('cta.special_offer')}
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-800 bg-transparent px-12 py-4 text-lg">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-sage-800 bg-transparent px-12 py-4 text-lg">
               {t('cta.meeting')}
             </Button>
           </div>
@@ -514,25 +513,25 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-green-900 text-white py-16">
+      <footer className="bg-sage-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">MP</span>
+                <div className="w-12 h-12 bg-gradient-to-br from-sage-100 to-sage-300 rounded-lg flex items-center justify-center">
+                  <span className="text-sage-900 font-bold text-xl">MP</span>
                 </div>
                 <span className="text-2xl font-bold">Masovia Poultry</span>
               </div>
-              <p className="text-green-200 mb-4">
+              <p className="text-sage-200 mb-4">
                 {t('footer.tagline')}
               </p>
-              <p className="text-green-300 font-bold">{t('footer.company_info')}</p>
+              <p className="text-sage-300 font-bold">{t('footer.company_info')}</p>
             </div>
             
             <div>
               <h4 className="font-bold mb-6 text-lg">{t('footer.products.title')}</h4>
-              <ul className="space-y-3 text-green-200">
+              <ul className="space-y-3 text-sage-200">
                 <li>{t('footer.products.breast')}</li>
                 <li>{t('footer.products.wings')}</li>
                 <li>{t('footer.products.quarters')}</li>
@@ -544,7 +543,7 @@ const Index = () => {
             
             <div>
               <h4 className="font-bold mb-6 text-lg">{t('footer.company.title')}</h4>
-              <ul className="space-y-3 text-green-200">
+              <ul className="space-y-3 text-sage-200">
                 <li>{t('footer.company.about')}</li>
                 <li>{t('footer.company.history')}</li>
                 <li>{t('footer.company.certificates')}</li>
@@ -556,7 +555,7 @@ const Index = () => {
             
             <div>
               <h4 className="font-bold mb-6 text-lg">{t('footer.contact.title')}</h4>
-              <ul className="space-y-3 text-green-200">
+              <ul className="space-y-3 text-sage-200">
                 <li><Phone className="inline h-4 w-4 mr-2" />+48 123 456 789</li>
                 <li><Mail className="inline h-4 w-4 mr-2" />export@masoviapoultry.pl</li>
                 <li><MapPin className="inline h-4 w-4 mr-2" />ul. Przemysłowa 15</li>
@@ -565,7 +564,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="border-t border-green-800 pt-8 text-center text-green-200">
+          <div className="border-t border-sage-800 pt-8 text-center text-sage-200">
             <p>{t('footer.copyright')}</p>
           </div>
         </div>
