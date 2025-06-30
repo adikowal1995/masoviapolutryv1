@@ -171,7 +171,7 @@ const Index = () => {
               title={t('product.chicken_wings.title')}
               description={t('product.chicken_wings.desc')}
               features={["Różne cięcia", "Świeże i mrożone", "Opakowania od 1kg do 15kg", "Export quality"]} 
-              image="photo-1444731961956-751ed90baaa5" 
+              image="/skrzydelka.jpg" 
             />
             <ProductCard 
               title={t('product.chicken_quarters.title')}
