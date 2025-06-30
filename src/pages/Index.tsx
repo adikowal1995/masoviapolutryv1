@@ -183,7 +183,7 @@ const Index = () => {
               title={t('product.whole_chicken.title')}
               description={t('product.whole_chicken.desc')}
               features={["Waga 1-2.5kg", "Klasa A premium", "Własne farmy", "Certyfikat pochodzenia"]} 
-              image="photo-1504439904031-93ded9f93e4e" 
+              image="https://www.megapixl.com/raw-chicken-wings-stock-photo-06534184535" 
             />
             <ProductCard 
               title={t('product.giblets.title')}
