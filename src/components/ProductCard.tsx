@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,7 @@ const ProductCard = ({ title, description, features, image }: ProductCardProps) 
     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-sage-100">
       <div className="aspect-video bg-gradient-to-br from-sage-100 to-sage-200 relative overflow-hidden">
         <img 
-          src={`https://images.unsplash.com/${image}?w=400&h=240&fit=crop`}
+          src={process.env.NODE_ENV === 'production' ? '/placeholder.svg' : `https://images.unsplash.com/${image}?w=400&h=240&fit=crop`}
           alt={title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
