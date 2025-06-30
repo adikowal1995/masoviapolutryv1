@@ -195,7 +195,7 @@ const Index = () => {
               title={t('product.processed.title')}
               description={t('product.processed.desc')}
               features={["Według receptur klienta", "Private label", "Różne panierki", "Kontrola jakości"]} 
-              image="photo-1506905925346-21bda4d32df4" 
+              image="https://images.unsplash.com/photo-1592011432621-f7f576f44484?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             />
           </div>
 
