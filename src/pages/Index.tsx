@@ -42,7 +42,14 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-sage-300 via-sage-400 to-sage-500 text-sage-900 overflow-hidden">
+      <section
+        className="relative py-24 text-sage-900 overflow-hidden"
+        style={{
+          backgroundImage: `url('https://drive.google.com/uc?export=view&id=1MebrZ1QoVVoNm5AYCMrPEZCATSvBdcSJ')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">

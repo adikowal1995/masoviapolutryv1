@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'pl' | 'fr';
@@ -19,7 +18,7 @@ const translations = {
     'nav.quality': 'Jakość',
     'nav.certificates': 'Certyfikaty',
     'nav.contact': 'Kontakt',
-    'nav.download_price': 'Pobierz cennik',
+    'nav.download_price': 'Skontaktuj się',
     
     // Hero Section
     'hero.badge': 'Wiodący Eksporter w Polsce',
