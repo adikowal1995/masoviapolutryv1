@@ -45,7 +45,7 @@ const Index = () => {
       <section
         className="relative py-24 text-sage-900 overflow-hidden"
         style={{
-          backgroundImage: `url('https://drive.google.com/uc?export=view&id=1MebrZ1QoVVoNm5AYCMrPEZCATSvBdcSJ')`,
+          backgroundImage: `url('${import.meta.env.BASE_URL}Masovia%20Polutry%20Farming.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
