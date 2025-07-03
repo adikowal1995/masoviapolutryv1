@@ -621,7 +621,7 @@ const translations = {
     'nav.quality': 'Quality',
     'nav.certificates': 'Certificates',
     'nav.contact': 'Contact',
-    'nav.download_price': 'Request prices',
+    'nav.download_price': 'Contact us',
     
     // Hero Section
     'hero.badge': 'Leading Exporter in Poland',
