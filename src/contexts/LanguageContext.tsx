@@ -65,6 +65,12 @@ const translations = {
     'product.giblets.desc': 'Wysokiej jakości podroby: serca, żołądki, wątróbki, szyje. Idealne do dalszego przetwórstwa.',
     'product.processed.title': 'Produkty przetworzone',
     'product.processed.desc': 'Gotowe produkty według specyfikacji klienta: nuggetsy, stripsy, kotlety. Możliwość private label.',
+    'product.carcasses.title': 'Tuszki drobiowe',
+    'product.carcasses.desc': 'Świeże i mrożone tuszki drobiowe, różne wagi i pakowania. Idealne do dalszego przetwórstwa i eksportu.',
+    'product.drumsticks.title': 'Podudzia',
+    'product.drumsticks.desc': 'Podudzia z kurczaka klasy A, dostępne świeże i mrożone. Pakowane próżniowo lub MAP.',
+    'product.cut_feet.title': 'Łapy cięte',
+    'product.cut_feet.desc': 'Łapy drobiowe cięte i sortowane, eksportowane głównie na rynki azjatyckie. Pakowanie na zamówienie.',
     
     // Special Products
     'special.title': 'Specjalne Produkty na Zamówienie',
@@ -222,6 +228,12 @@ const translations = {
     'product.giblets.desc': 'Abats de haute qualité : cœurs, gésiers, foies, cous. Idéaux pour transformation ultérieure.',
     'product.processed.title': 'Produits transformés',
     'product.processed.desc': 'Produits finis selon spécifications client : nuggets, strips, escalopes. Possibilité marque privée.',
+    'product.carcasses.title': 'Carcasses de volaille',
+    'product.carcasses.desc': 'Carcasses fraîches et surgelées, différents poids et conditionnements. Idéales pour transformation et export.',
+    'product.drumsticks.title': 'Pilons',
+    'product.drumsticks.desc': 'Pilons de poulet de classe A, disponibles frais et surgelés. Conditionnement sous vide ou MAP.',
+    'product.cut_feet.title': 'Pattes coupées',
+    'product.cut_feet.desc': 'Pattes de volaille coupées et triées, principalement exportées vers l\'Asie. Conditionnement sur demande.',
     
     // Special Products
     'special.title': 'Produits Spéciaux sur Commande',

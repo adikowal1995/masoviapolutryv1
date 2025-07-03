@@ -162,16 +162,34 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <ProductCard 
+              title={t('product.whole_chicken.title')}
+              description={t('product.whole_chicken.desc')}
+              features={["Waga 1-2.5kg", "Klasa A premium", "Własne farmy", "Certyfikat pochodzenia"]} 
+              image="https://www.megapixl.com/raw-chicken-wings-stock-photo-06534184535" 
+            />
+            <ProductCard 
+              title={t('product.carcasses.title')}
+              description={t('product.carcasses.desc')}
+              features={["Świeże i mrożone tuszki", "Różne wagi", "Pakowanie próżniowe", "Certyfikowane pochodzenie"]}
+              image="/placeholder.svg"
+            />
+            <ProductCard 
+              title={t('product.processed.title')}
+              description={t('product.processed.desc')}
+              features={["Według receptur klienta", "Private label", "Różne panierki", "Kontrola jakości"]} 
+              image="https://images.unsplash.com/photo-1592011432621-f7f576f44484?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            />
+            <ProductCard 
               title={t('product.chicken_breast.title')}
               description={t('product.chicken_breast.desc')}
               features={["Bez antybiotyków", "Klasa A", "Pakowanie próżniowe", "Shelf life 10 dni"]} 
               image="/piersi z kurczaka.jpg" 
             />
             <ProductCard 
-              title={t('product.chicken_wings.title')}
-              description={t('product.chicken_wings.desc')}
-              features={["Różne cięcia", "Świeże i mrożone", "Opakowania od 1kg do 15kg", "Export quality"]} 
-              image="/skrzydelka.jpg" 
+              title={t('product.drumsticks.title')}
+              description={t('product.drumsticks.desc')}
+              features={["Podudzia z kurczaka klasy A", "Pakowanie MAP", "Dostępne świeże i mrożone", "Różne gramatury"]}
+              image="/podudzia z kurczaka.jpg"
             />
             <ProductCard 
               title={t('product.chicken_quarters.title')}
@@ -180,10 +198,10 @@ const Index = () => {
               image="photo-1518191319892-1c2dcb9836c3" 
             />
             <ProductCard 
-              title={t('product.whole_chicken.title')}
-              description={t('product.whole_chicken.desc')}
-              features={["Waga 1-2.5kg", "Klasa A premium", "Własne farmy", "Certyfikat pochodzenia"]} 
-              image="https://www.megapixl.com/raw-chicken-wings-stock-photo-06534184535" 
+              title={t('product.chicken_wings.title')}
+              description={t('product.chicken_wings.desc')}
+              features={["Różne cięcia", "Świeże i mrożone", "Opakowania od 1kg do 15kg", "Export quality"]} 
+              image="/skrzydelka.jpg" 
             />
             <ProductCard 
               title={t('product.giblets.title')}
@@ -192,10 +210,10 @@ const Index = () => {
               image="photo-1444665559562-dcea25ea8801" 
             />
             <ProductCard 
-              title={t('product.processed.title')}
-              description={t('product.processed.desc')}
-              features={["Według receptur klienta", "Private label", "Różne panierki", "Kontrola jakości"]} 
-              image="https://images.unsplash.com/photo-1592011432621-f7f576f44484?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              title={t('product.cut_feet.title')}
+              description={t('product.cut_feet.desc')}
+              features={["Łapy cięte i sortowane", "Idealne do przetwórstwa", "Pakowanie na zamówienie", "Eksport do Azji"]}
+              image="/placeholder.svg"
             />
           </div>
 
