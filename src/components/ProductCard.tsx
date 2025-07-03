@@ -20,9 +20,6 @@ const ProductCard = ({ title, description, features, image }: ProductCardProps) 
           alt={title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute top-4 right-4">
-          <Badge className="bg-sage-600 text-white border-none">Premium</Badge>
-        </div>
       </div>
       
       <CardHeader>
@@ -39,9 +36,6 @@ const ProductCard = ({ title, description, features, image }: ProductCardProps) 
             </div>
           ))}
         </div>
-        <Button className="w-full bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900">
-          Zapytaj o cenę
-        </Button>
       </CardContent>
     </Card>
   );
