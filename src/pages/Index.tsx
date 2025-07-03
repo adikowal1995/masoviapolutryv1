@@ -96,9 +96,7 @@ const Index = () => {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 100" className="w-full h-16 text-white fill-current">
-            <path d="M0,50 C480,100 960,0 1440,50 L1440,100 L0,100 Z"></path>
-          </svg>
+          {/* SVG wave removed to prevent covering the background image */}
         </div>
       </section>
 
@@ -164,56 +162,56 @@ const Index = () => {
             <ProductCard 
               title={t('product.whole_chicken.title')}
               description={t('product.whole_chicken.desc')}
-              features={["Waga 1-2.5kg", "Klasa A premium", "Własne farmy", "Certyfikat pochodzenia"]} 
-              image="https://www.megapixl.com/raw-chicken-wings-stock-photo-06534184535" 
+              features={[t('product.whole_chicken.feature1'), t('product.whole_chicken.feature2'), t('product.whole_chicken.feature3'), t('product.whole_chicken.feature4')]} 
+              image="/cały kurczak.jpg" 
             />
             <ProductCard 
               title={t('product.carcasses.title')}
               description={t('product.carcasses.desc')}
-              features={["Świeże i mrożone tuszki", "Różne wagi", "Pakowanie próżniowe", "Certyfikowane pochodzenie"]}
-              image="/placeholder.svg"
+              features={[t('product.carcasses.feature1'), t('product.carcasses.feature2'), t('product.carcasses.feature3'), t('product.carcasses.feature4')]}
+              image="/tuszka drobiowa.jpg"
             />
             <ProductCard 
               title={t('product.processed.title')}
               description={t('product.processed.desc')}
-              features={["Według receptur klienta", "Private label", "Różne panierki", "Kontrola jakości"]} 
-              image="https://images.unsplash.com/photo-1592011432621-f7f576f44484?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+              features={[t('product.processed.feature1'), t('product.processed.feature2'), t('product.processed.feature3'), t('product.processed.feature4')]} 
+              image="/jajka.jpg" 
             />
             <ProductCard 
               title={t('product.chicken_breast.title')}
               description={t('product.chicken_breast.desc')}
-              features={["Bez antybiotyków", "Klasa A", "Pakowanie próżniowe", "Shelf life 10 dni"]} 
+              features={[t('product.chicken_breast.feature1'), t('product.chicken_breast.feature2'), t('product.chicken_breast.feature3'), t('product.chicken_breast.feature4')]} 
               image="/piersi z kurczaka.jpg" 
             />
             <ProductCard 
               title={t('product.drumsticks.title')}
               description={t('product.drumsticks.desc')}
-              features={["Podudzia z kurczaka klasy A", "Pakowanie MAP", "Dostępne świeże i mrożone", "Różne gramatury"]}
+              features={[t('product.drumsticks.feature1'), t('product.drumsticks.feature2'), t('product.drumsticks.feature3'), t('product.drumsticks.feature4')]}
               image="/podudzia z kurczaka.jpg"
             />
             <ProductCard 
               title={t('product.chicken_quarters.title')}
               description={t('product.chicken_quarters.desc')}
-              features={["Górne i dolne", "Różne wagi", "Opakowanie MAP", "Długa trwałość"]} 
-              image="photo-1518191319892-1c2dcb9836c3" 
+              features={[t('product.chicken_quarters.feature1'), t('product.chicken_quarters.feature2'), t('product.chicken_quarters.feature3'), t('product.chicken_quarters.feature4')]} 
+              image="/Ćwiartki kurczaka.jpg" 
             />
             <ProductCard 
               title={t('product.chicken_wings.title')}
               description={t('product.chicken_wings.desc')}
-              features={["Różne cięcia", "Świeże i mrożone", "Opakowania od 1kg do 15kg", "Export quality"]} 
+              features={[t('product.chicken_wings.feature1'), t('product.chicken_wings.feature2'), t('product.chicken_wings.feature3'), t('product.chicken_wings.feature4')]} 
               image="/skrzydelka.jpg" 
             />
             <ProductCard 
               title={t('product.giblets.title')}
               description={t('product.giblets.desc')}
-              features={["Serca, żołądki, wątróbki", "Świeże i mrożone", "Kontrola weterynaryjna", "Pakowanie na zamówienie"]} 
-              image="photo-1444665559562-dcea25ea8801" 
+              features={[t('product.giblets.feature1'), t('product.giblets.feature2'), t('product.giblets.feature3'), t('product.giblets.feature4')]} 
+              image="/Podroby drobiowe.jpg" 
             />
             <ProductCard 
               title={t('product.cut_feet.title')}
               description={t('product.cut_feet.desc')}
-              features={["Łapy cięte i sortowane", "Idealne do przetwórstwa", "Pakowanie na zamówienie", "Eksport do Azji"]}
-              image="/placeholder.svg"
+              features={[t('product.cut_feet.feature1'), t('product.cut_feet.feature2'), t('product.cut_feet.feature3'), t('product.cut_feet.feature4')]}
+              image="/Łapy cięte.jpg"
             />
           </div>
 

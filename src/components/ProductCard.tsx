@@ -39,7 +39,6 @@ const ProductCard = ({ title, description, features, image }: ProductCardProps) 
             </div>
           ))}
         </div>
-        
         <Button className="w-full bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900">
           Zapytaj o cenę
         </Button>

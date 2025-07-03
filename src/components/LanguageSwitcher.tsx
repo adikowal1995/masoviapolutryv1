@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -10,13 +9,14 @@ const LanguageSwitcher = () => {
   return (
     <div className="flex items-center space-x-2">
       <Globe className="h-4 w-4 text-sage-600" />
-      <Select value={language} onValueChange={(value: 'pl' | 'fr') => setLanguage(value)}>
+      <Select value={language} onValueChange={(value: 'pl' | 'fr' | 'it') => setLanguage(value)}>
         <SelectTrigger className="w-20 h-8 border-sage-300 focus:ring-sage-500">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="pl">PL</SelectItem>
           <SelectItem value="fr">FR</SelectItem>
+          <SelectItem value="it">IT</SelectItem>
         </SelectContent>
       </Select>
     </div>
