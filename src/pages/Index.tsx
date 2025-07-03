@@ -165,7 +165,7 @@ const Index = () => {
               title={t('product.chicken_breast.title')}
               description={t('product.chicken_breast.desc')}
               features={["Bez antybiotyków", "Klasa A", "Pakowanie próżniowe", "Shelf life 10 dni"]} 
-              image="photo-1548550023-2bdb3c5beed7" 
+              image="/piersi z kurczaka.jpg" 
             />
             <ProductCard 
               title={t('product.chicken_wings.title')}
