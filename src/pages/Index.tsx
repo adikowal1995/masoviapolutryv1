@@ -18,21 +18,18 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-sage-300 to-sage-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">MP</span>
-              </div>
               <div>
                 <h1 className="text-2xl font-bold text-sage-800">Masovia Poultry</h1>
                 <p className="text-sm text-sage-600">Polski Drób Premium - Eksporter Nr 1</p>
               </div>
             </div>
+            <LanguageSwitcher />
             <div className="hidden md:flex items-center space-x-8">
               <a href="#produkty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.products')}</a>
               <a href="#o-nas" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.about')}</a>
               <a href="#jakosc" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.quality')}</a>
               <a href="#certyfikaty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.certificates')}</a>
               <a href="#kontakt" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.contact')}</a>
-              <LanguageSwitcher />
             </div>
             <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-6 py-2">
               {t('nav.download_price')}
@@ -538,9 +535,6 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-sage-100 to-sage-300 rounded-lg flex items-center justify-center">
-                  <span className="text-sage-900 font-bold text-xl">MP</span>
-                </div>
                 <span className="text-2xl font-bold">Masovia Poultry</span>
               </div>
               <p className="text-sage-200 mb-4">
