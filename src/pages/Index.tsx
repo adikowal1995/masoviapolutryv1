@@ -20,7 +20,7 @@ const Index = () => {
             <div className="flex items-center space-x-3">
               <div>
                 <h1 className="text-2xl font-bold text-sage-800">Masovia Poultry</h1>
-                <p className="text-sm text-sage-600">Polski Drób Premium - Eksporter Nr 1</p>
+                <p className="text-sm text-sage-600">{t('nav.tagline')}</p>
               </div>
             </div>
             <LanguageSwitcher />
@@ -31,7 +31,7 @@ const Index = () => {
               <a href="#certyfikaty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.certificates')}</a>
               <a href="#kontakt" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.contact')}</a>
             </div>
-            <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-6 py-2">
+            <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-3 md:px-6 py-2">
               {t('nav.download_price')}
             </Button>
           </nav>

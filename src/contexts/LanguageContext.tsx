@@ -19,6 +19,7 @@ const translations = {
     'nav.certificates': 'Certyfikaty',
     'nav.contact': 'Kontakt',
     'nav.download_price': 'Skontaktuj się',
+    'nav.tagline': 'Polski Drób Premium - Eksporter Nr 1',
     
     // Hero Section
     'hero.badge': 'Wiodący Eksporter w Polsce',
@@ -220,6 +221,7 @@ const translations = {
     'nav.certificates': 'Certificats',
     'nav.contact': 'Contact',
     'nav.download_price': 'Contactez-nous',
+    'nav.tagline': 'Volaille Polonaise Premium - Exportateur N°1',
     
     // Hero Section
     'hero.badge': 'Exportateur leader en Pologne',
@@ -433,6 +435,7 @@ const translations = {
     'nav.certificates': 'Certificati',
     'nav.contact': 'Contatto',
     'nav.download_price': 'Contattaci',
+    'nav.tagline': 'Pollame Polacco Premium - Esportatore N°1',
 
     // Hero Section
     'hero.badge': 'Leader Esportatore in Polonia',
@@ -634,6 +637,7 @@ const translations = {
     'nav.certificates': 'Certificates',
     'nav.contact': 'Contact',
     'nav.download_price': 'Contact us',
+    'nav.tagline': 'Polish Premium Poultry - Exporter No. 1',
     
     // Hero Section
     'hero.badge': 'Leading Exporter in Poland',
@@ -847,6 +851,7 @@ const translations = {
     'nav.certificates': 'الشهادات',
     'nav.contact': 'اتصل بنا',
     'nav.download_price': 'اتصل بنا',
+    'nav.tagline': 'دواجن بولندية بريميوم - المصدر رقم 1',
     // Hero Section
     'hero.badge': 'المصدر الرائد في بولندا',
     'hero.title': 'دواجن بولندية',
