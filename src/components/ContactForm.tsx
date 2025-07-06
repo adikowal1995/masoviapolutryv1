@@ -56,9 +56,9 @@ const ContactForm = () => {
   };
 
   return (
-    <Card className="border-green-100">
+    <Card className="border-sage-100">
       <CardHeader>
-        <CardTitle className="text-2xl text-green-800">{t('form.title')}</CardTitle>
+        <CardTitle className="text-2xl text-sage-800">{t('form.title')}</CardTitle>
         <CardDescription>
           {t('form.description')}
         </CardDescription>
@@ -75,7 +75,7 @@ const ContactForm = () => {
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
                 required
-                className="border-green-200 focus:border-green-500"
+                className="border-sage-200 focus:border-sage-500"
               />
             </div>
             <div className="space-y-2">
@@ -87,7 +87,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 required
-                className="border-green-200 focus:border-green-500"
+                className="border-sage-200 focus:border-sage-500"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 required
-                className="border-green-200 focus:border-green-500"
+                className="border-sage-200 focus:border-sage-500"
               />
             </div>
             <div className="space-y-2">
@@ -113,7 +113,7 @@ const ContactForm = () => {
                 placeholder={t('form.phone_placeholder')}
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
-                className="border-green-200 focus:border-green-500"
+                className="border-sage-200 focus:border-sage-500"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@ const ContactForm = () => {
             <div className="space-y-2">
               <Label htmlFor="country">{t('form.country')}</Label>
               <Select onValueChange={(value) => handleInputChange('country', value)}>
-                <SelectTrigger className="border-green-200 focus:border-green-500">
+                <SelectTrigger className="border-sage-200 focus:border-sage-500">
                   <SelectValue placeholder={t('form.country_placeholder')} />
                 </SelectTrigger>
                 <SelectContent>
@@ -142,7 +142,7 @@ const ContactForm = () => {
             <div className="space-y-2">
               <Label htmlFor="productType">{t('form.product_type')}</Label>
               <Select onValueChange={(value) => handleInputChange('productType', value)}>
-                <SelectTrigger className="border-green-200 focus:border-green-500">
+                <SelectTrigger className="border-sage-200 focus:border-sage-500">
                   <SelectValue placeholder={t('form.product_type_placeholder')} />
                 </SelectTrigger>
                 <SelectContent>
@@ -166,7 +166,7 @@ const ContactForm = () => {
               placeholder={t('form.quantity_placeholder')}
               value={formData.quantity}
               onChange={(e) => handleInputChange('quantity', e.target.value)}
-              className="border-green-200 focus:border-green-500"
+              className="border-sage-200 focus:border-sage-500"
             />
           </div>
 
@@ -178,7 +178,7 @@ const ContactForm = () => {
               rows={4}
               value={formData.message}
               onChange={(e) => handleInputChange('message', e.target.value)}
-              className="border-green-200 focus:border-green-500"
+              className="border-sage-200 focus:border-sage-500"
             />
           </div>
 
@@ -196,7 +196,7 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             size="lg" 
-            className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white"
+            className="w-full bg-gradient-to-r from-sage-600 to-sage-700 hover:from-sage-700 hover:to-sage-800 text-white"
           >
             <Send className="mr-2 h-5 w-5" />
             {t('form.submit')}
