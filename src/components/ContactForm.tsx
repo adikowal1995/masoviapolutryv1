@@ -7,12 +7,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { useLanguage } from '../contexts/LanguageContext';
+import emailjs from '@emailjs/browser';
+import { emailjsConfig } from '../config/emailjs';
 
 const ContactForm = () => {
   const { toast } = useToast();
   const { t } = useLanguage();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     company: '',
     name: '',
@@ -25,27 +28,57 @@ const ContactForm = () => {
     newsletter: false
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: t('form.success_title'),
-      description: t('form.success_description'),
-    });
-    
-    // Reset form
-    setFormData({
-      company: '',
-      name: '',
-      email: '',
-      phone: '',
-      country: '',
-      productType: '',
-      quantity: '',
-      message: '',
-      newsletter: false
-    });
+    setIsLoading(true);
+
+    try {
+      // EmailJS configuration
+      const { serviceId, templateId, publicKey } = emailjsConfig;
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        phone: formData.phone,
+        country: formData.country,
+        product_type: formData.productType,
+        quantity: formData.quantity,
+        message: formData.message,
+        newsletter: formData.newsletter ? 'Yes' : 'No',
+        to_name: 'Masovia Poultry Team'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      toast({
+        title: t('form.success_title'),
+        description: t('form.success_description'),
+      });
+
+      // Reset form
+      setFormData({
+        company: '',
+        name: '',
+        email: '',
+        phone: '',
+        country: '',
+        productType: '',
+        quantity: '',
+        message: '',
+        newsletter: false
+      });
+
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again or contact us directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -75,6 +108,7 @@ const ContactForm = () => {
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
                 required
+                disabled={isLoading}
                 className="border-sage-200 focus:border-sage-500"
               />
             </div>
@@ -87,6 +121,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 required
+                disabled={isLoading}
                 className="border-sage-200 focus:border-sage-500"
               />
             </div>
@@ -102,6 +137,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 required
+                disabled={isLoading}
                 className="border-sage-200 focus:border-sage-500"
               />
             </div>
@@ -113,6 +149,7 @@ const ContactForm = () => {
                 placeholder={t('form.phone_placeholder')}
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
+                disabled={isLoading}
                 className="border-sage-200 focus:border-sage-500"
               />
             </div>
@@ -121,7 +158,7 @@ const ContactForm = () => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="country">{t('form.country')}</Label>
-              <Select onValueChange={(value) => handleInputChange('country', value)}>
+              <Select onValueChange={(value) => handleInputChange('country', value)} disabled={isLoading}>
                 <SelectTrigger className="border-sage-200 focus:border-sage-500">
                   <SelectValue placeholder={t('form.country_placeholder')} />
                 </SelectTrigger>
@@ -141,7 +178,7 @@ const ContactForm = () => {
             </div>
             <div className="space-y-2">
               <Label htmlFor="productType">{t('form.product_type')}</Label>
-              <Select onValueChange={(value) => handleInputChange('productType', value)}>
+              <Select onValueChange={(value) => handleInputChange('productType', value)} disabled={isLoading}>
                 <SelectTrigger className="border-sage-200 focus:border-sage-500">
                   <SelectValue placeholder={t('form.product_type_placeholder')} />
                 </SelectTrigger>
@@ -166,6 +203,7 @@ const ContactForm = () => {
               placeholder={t('form.quantity_placeholder')}
               value={formData.quantity}
               onChange={(e) => handleInputChange('quantity', e.target.value)}
+              disabled={isLoading}
               className="border-sage-200 focus:border-sage-500"
             />
           </div>
@@ -178,6 +216,7 @@ const ContactForm = () => {
               rows={4}
               value={formData.message}
               onChange={(e) => handleInputChange('message', e.target.value)}
+              disabled={isLoading}
               className="border-sage-200 focus:border-sage-500"
             />
           </div>
@@ -187,6 +226,7 @@ const ContactForm = () => {
               id="newsletter"
               checked={formData.newsletter}
               onCheckedChange={(checked) => handleInputChange('newsletter', checked as boolean)}
+              disabled={isLoading}
             />
             <Label htmlFor="newsletter" className="text-sm text-gray-600">
               {t('form.newsletter')}
@@ -196,10 +236,20 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             size="lg" 
-            className="w-full bg-gradient-to-r from-sage-600 to-sage-700 hover:from-sage-700 hover:to-sage-800 text-white"
+            disabled={isLoading}
+            className="w-full bg-gradient-to-r from-sage-600 to-sage-700 hover:from-sage-700 hover:to-sage-800 text-white disabled:opacity-50"
           >
-            <Send className="mr-2 h-5 w-5" />
-            {t('form.submit')}
+            {isLoading ? (
+              <>
+                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                <Send className="mr-2 h-5 w-5" />
+                {t('form.submit')}
+              </>
+            )}
           </Button>
         </form>
       </CardContent>
