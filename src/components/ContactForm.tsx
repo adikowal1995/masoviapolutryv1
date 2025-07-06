@@ -39,6 +39,7 @@ const ContactForm = () => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
+        reply_to: formData.email, // Add reply-to header
         company: formData.company,
         phone: formData.phone,
         country: formData.country,
