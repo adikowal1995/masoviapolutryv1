@@ -82,7 +82,7 @@ const translations = {
     'special.private.desc': 'Produkty pod marką klienta',
     'special.export.title': 'Export Worldwide',
     'special.export.desc': 'Dostawy do 40+ krajów',
-    'special.cta': 'Pobierz pełny katalog produktów (PDF)',
+    'special.cta': 'Pobierz katalog produktów',
     
     // Quality Section
     'quality.title': 'Najwyższe Standardy Jakości',
@@ -145,6 +145,51 @@ const translations = {
     'contact.hours.saturday': 'Sobota: 9:00 - 14:00',
     'contact.hours.sunday': 'Niedziela: Zamknięte',
     'contact.hours.urgent': 'W przypadku pilnych spraw eksportowych jesteśmy dostępni 24/7',
+    
+    // Contact Form
+    'form.title': 'Formularz zapytania ofertowego',
+    'form.description': 'Wypełnij formularz, a nasz zespół przygotuje dla Ciebie spersonalizowaną ofertę',
+    'form.company': 'Nazwa firmy *',
+    'form.company_placeholder': 'Wpisz nazwę firmy',
+    'form.name': 'Imię i nazwisko *',
+    'form.name_placeholder': 'Wpisz imię i nazwisko',
+    'form.email': 'Email *',
+    'form.email_placeholder': 'twoj@email.com',
+    'form.phone': 'Telefon',
+    'form.phone_placeholder': '+48 123 456 789',
+    'form.country': 'Kraj *',
+    'form.country_placeholder': 'Wybierz kraj',
+    'form.product_type': 'Typ produktu *',
+    'form.product_type_placeholder': 'Wybierz produkt',
+    'form.quantity': 'Przewidywana ilość miesięczna',
+    'form.quantity_placeholder': 'np. 10 ton, 5000 kg',
+    'form.message': 'Dodatkowe informacje',
+    'form.message_placeholder': 'Opisz swoje wymagania, preferowane opakowanie, certyfikaty, terminy dostaw...',
+    'form.newsletter': 'Chcę otrzymywać informacje o nowych produktach i promocjach',
+    'form.submit': 'Wyślij zapytanie',
+    'form.success_title': 'Zapytanie wysłane!',
+    'form.success_description': 'Skontaktujemy się z Państwem w ciągu 24 godzin.',
+    
+    // Countries
+    'country.germany': 'Niemcy',
+    'country.france': 'Francja',
+    'country.uk': 'Wielka Brytania',
+    'country.netherlands': 'Holandia',
+    'country.italy': 'Włochy',
+    'country.spain': 'Hiszpania',
+    'country.czech': 'Czechy',
+    'country.slovakia': 'Słowacja',
+    'country.saudi_arabia': 'Arabia Saudyjska',
+    'country.other': 'Inny',
+    
+    // Product Types
+    'product_type.breast': 'Piersi z kurczaka',
+    'product_type.wings': 'Skrzydełka',
+    'product_type.quarters': 'Ćwiartki',
+    'product_type.whole': 'Cały kurczak',
+    'product_type.offal': 'Podroby',
+    'product_type.processed': 'Przetwory',
+    'product_type.mix': 'Produkty mieszane',
     
     // CTA Section
     'cta.title': 'Dołącz do Grona Naszych Partnerów',
@@ -284,7 +329,7 @@ const translations = {
     'special.private.desc': 'Produits sous marque client',
     'special.export.title': 'Export Mondial',
     'special.export.desc': 'Livraisons vers 40+ pays',
-    'special.cta': 'Télécharger le catalogue complet des produits (PDF)',
+    'special.cta': 'Télécharger le catalogue',
     
     // Quality Section
     'quality.title': 'Standards de Qualité les Plus Élevés',
@@ -347,6 +392,51 @@ const translations = {
     'contact.hours.saturday': 'Samedi : 9:00 - 14:00',
     'contact.hours.sunday': 'Dimanche : Fermé',
     'contact.hours.urgent': 'Pour les affaires d\'exportation urgentes, nous sommes disponibles 24h/24 7j/7',
+    
+    // Contact Form
+    'form.title': 'Formulaire de demande de devis',
+    'form.description': 'Remplissez le formulaire et notre équipe préparera une offre personnalisée pour vous',
+    'form.company': 'Nom de l\'entreprise *',
+    'form.company_placeholder': 'Entrez le nom de l\'entreprise',
+    'form.name': 'Prénom et nom *',
+    'form.name_placeholder': 'Entrez votre prénom et nom',
+    'form.email': 'Email *',
+    'form.email_placeholder': 'votre@email.com',
+    'form.phone': 'Téléphone',
+    'form.phone_placeholder': '+48 123 456 789',
+    'form.country': 'Pays *',
+    'form.country_placeholder': 'Sélectionnez un pays',
+    'form.product_type': 'Type de produit *',
+    'form.product_type_placeholder': 'Sélectionnez un produit',
+    'form.quantity': 'Quantité mensuelle prévue',
+    'form.quantity_placeholder': 'ex. 10 tonnes, 5000 kg',
+    'form.message': 'Informations supplémentaires',
+    'form.message_placeholder': 'Décrivez vos exigences, emballage préféré, certificats, délais de livraison...',
+    'form.newsletter': 'Je veux recevoir des informations sur les nouveaux produits et promotions',
+    'form.submit': 'Envoyer la demande',
+    'form.success_title': 'Demande envoyée !',
+    'form.success_description': 'Nous vous contacterons dans les 24 heures.',
+    
+    // Countries
+    'country.germany': 'Allemagne',
+    'country.france': 'France',
+    'country.uk': 'Royaume-Uni',
+    'country.netherlands': 'Pays-Bas',
+    'country.italy': 'Italie',
+    'country.spain': 'Espagne',
+    'country.czech': 'République tchèque',
+    'country.slovakia': 'Slovaquie',
+    'country.saudi_arabia': 'Arabie Saoudite',
+    'country.other': 'Autre',
+    
+    // Product Types
+    'product_type.breast': 'Filets de poulet',
+    'product_type.wings': 'Ailes',
+    'product_type.quarters': 'Quartiers',
+    'product_type.whole': 'Poulet entier',
+    'product_type.offal': 'Abats',
+    'product_type.processed': 'Produits transformés',
+    'product_type.mix': 'Produits mixtes',
     
     // CTA Section
     'cta.title': 'Rejoignez le Cercle de Nos Partenaires',
@@ -498,7 +588,7 @@ const translations = {
     'special.private.desc': 'Prodotti a marchio del cliente',
     'special.export.title': 'Export Mondiale',
     'special.export.desc': 'Consegne in oltre 40 paesi',
-    'special.cta': 'Scarica il catalogo completo dei prodotti (PDF)',
+    'special.cta': 'Scarica il catalogo',
 
     // Quality Section
     'quality.title': 'Standard di Qualità Più Elevati',
@@ -700,7 +790,7 @@ const translations = {
     'special.private.desc': 'Products under the client\'s brand',
     'special.export.title': 'Export Worldwide',
     'special.export.desc': 'Deliveries to 40+ countries',
-    'special.cta': 'Download the full product catalog (PDF)',
+    'special.cta': 'Download catalog',
     
     // Quality Section
     'quality.title': 'Highest Quality Standards',

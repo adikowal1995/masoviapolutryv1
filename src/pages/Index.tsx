@@ -23,7 +23,12 @@ const Index = () => {
                 <p className="text-sm text-sage-600">{t('nav.tagline')}</p>
               </div>
             </div>
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-3 md:px-6 py-2">
+                {t('nav.download_price')}
+              </Button>
+            </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#produkty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.products')}</a>
               <a href="#o-nas" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.about')}</a>
@@ -31,9 +36,6 @@ const Index = () => {
               <a href="#certyfikaty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.certificates')}</a>
               <a href="#kontakt" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.contact')}</a>
             </div>
-            <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-3 md:px-6 py-2">
-              {t('nav.download_price')}
-            </Button>
           </nav>
         </div>
       </header>
@@ -59,7 +61,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-sage-900 font-bold px-8 py-4 text-lg">
-                <Factory className="mr-2 h-5 w-5" />
+                <Mail className="mr-2 h-5 w-5" />
                 {t('hero.cta_offer')}
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-sage-800 bg-transparent px-8 py-4 text-lg">

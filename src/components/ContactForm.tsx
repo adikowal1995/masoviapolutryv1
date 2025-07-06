@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,9 +8,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     company: '',
     name: '',
@@ -29,8 +30,8 @@ const ContactForm = () => {
     console.log('Form submitted:', formData);
     
     toast({
-      title: "Zapytanie wysłane!",
-      description: "Skontaktujemy się z Państwem w ciągu 24 godzin.",
+      title: t('form.success_title'),
+      description: t('form.success_description'),
     });
     
     // Reset form
@@ -57,20 +58,20 @@ const ContactForm = () => {
   return (
     <Card className="border-green-100">
       <CardHeader>
-        <CardTitle className="text-2xl text-green-800">Formularz zapytania ofertowego</CardTitle>
+        <CardTitle className="text-2xl text-green-800">{t('form.title')}</CardTitle>
         <CardDescription>
-          Wypełnij formularz, a nasz zespład przygotuje dla Ciebie spersonalizowaną ofertę
+          {t('form.description')}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="company">Nazwa firmy *</Label>
+              <Label htmlFor="company">{t('form.company')}</Label>
               <Input
                 id="company"
                 type="text"
-                placeholder="Wpisz nazwę firmy"
+                placeholder={t('form.company_placeholder')}
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
                 required
@@ -78,11 +79,11 @@ const ContactForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="name">Imię i nazwisko *</Label>
+              <Label htmlFor="name">{t('form.name')}</Label>
               <Input
                 id="name"
                 type="text"
-                placeholder="Wpisz imię i nazwisko"
+                placeholder={t('form.name_placeholder')}
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 required
@@ -93,11 +94,11 @@ const ContactForm = () => {
 
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email *</Label>
+              <Label htmlFor="email">{t('form.email')}</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="twoj@email.com"
+                placeholder={t('form.email_placeholder')}
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 required
@@ -105,11 +106,11 @@ const ContactForm = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="phone">Telefon</Label>
+              <Label htmlFor="phone">{t('form.phone')}</Label>
               <Input
                 id="phone"
                 type="tel"
-                placeholder="+48 123 456 789"
+                placeholder={t('form.phone_placeholder')}
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
                 className="border-green-200 focus:border-green-500"
@@ -119,49 +120,50 @@ const ContactForm = () => {
 
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="country">Kraj *</Label>
+              <Label htmlFor="country">{t('form.country')}</Label>
               <Select onValueChange={(value) => handleInputChange('country', value)}>
                 <SelectTrigger className="border-green-200 focus:border-green-500">
-                  <SelectValue placeholder="Wybierz kraj" />
+                  <SelectValue placeholder={t('form.country_placeholder')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="germany">Niemcy</SelectItem>
-                  <SelectItem value="france">Francja</SelectItem>
-                  <SelectItem value="uk">Wielka Brytania</SelectItem>
-                  <SelectItem value="netherlands">Holandia</SelectItem>
-                  <SelectItem value="italy">Włochy</SelectItem>
-                  <SelectItem value="spain">Hiszpania</SelectItem>
-                  <SelectItem value="czech">Czechy</SelectItem>
-                  <SelectItem value="slovakia">Słowacja</SelectItem>
-                  <SelectItem value="other">Inny</SelectItem>
+                  <SelectItem value="germany">{t('country.germany')}</SelectItem>
+                  <SelectItem value="france">{t('country.france')}</SelectItem>
+                  <SelectItem value="uk">{t('country.uk')}</SelectItem>
+                  <SelectItem value="netherlands">{t('country.netherlands')}</SelectItem>
+                  <SelectItem value="italy">{t('country.italy')}</SelectItem>
+                  <SelectItem value="spain">{t('country.spain')}</SelectItem>
+                  <SelectItem value="czech">{t('country.czech')}</SelectItem>
+                  <SelectItem value="slovakia">{t('country.slovakia')}</SelectItem>
+                  <SelectItem value="saudi_arabia">{t('country.saudi_arabia')}</SelectItem>
+                  <SelectItem value="other">{t('country.other')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="productType">Typ produktu *</Label>
+              <Label htmlFor="productType">{t('form.product_type')}</Label>
               <Select onValueChange={(value) => handleInputChange('productType', value)}>
                 <SelectTrigger className="border-green-200 focus:border-green-500">
-                  <SelectValue placeholder="Wybierz produkt" />
+                  <SelectValue placeholder={t('form.product_type_placeholder')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="breast">Piersi z kurczaka</SelectItem>
-                  <SelectItem value="wings">Skrzydełka</SelectItem>
-                  <SelectItem value="quarters">Ćwiartki</SelectItem>
-                  <SelectItem value="whole">Cały kurczak</SelectItem>
-                  <SelectItem value="offal">Podroby</SelectItem>
-                  <SelectItem value="processed">Przetwory</SelectItem>
-                  <SelectItem value="mix">Produkty mieszane</SelectItem>
+                  <SelectItem value="breast">{t('product_type.breast')}</SelectItem>
+                  <SelectItem value="wings">{t('product_type.wings')}</SelectItem>
+                  <SelectItem value="quarters">{t('product_type.quarters')}</SelectItem>
+                  <SelectItem value="whole">{t('product_type.whole')}</SelectItem>
+                  <SelectItem value="offal">{t('product_type.offal')}</SelectItem>
+                  <SelectItem value="processed">{t('product_type.processed')}</SelectItem>
+                  <SelectItem value="mix">{t('product_type.mix')}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="quantity">Przewidywana ilość miesięczna</Label>
+            <Label htmlFor="quantity">{t('form.quantity')}</Label>
             <Input
               id="quantity"
               type="text"
-              placeholder="np. 10 ton, 5000 kg"
+              placeholder={t('form.quantity_placeholder')}
               value={formData.quantity}
               onChange={(e) => handleInputChange('quantity', e.target.value)}
               className="border-green-200 focus:border-green-500"
@@ -169,10 +171,10 @@ const ContactForm = () => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Dodatkowe informacje</Label>
+            <Label htmlFor="message">{t('form.message')}</Label>
             <Textarea
               id="message"
-              placeholder="Opisz swoje wymagania, preferowane opakowanie, certyfikaty, terminy dostaw..."
+              placeholder={t('form.message_placeholder')}
               rows={4}
               value={formData.message}
               onChange={(e) => handleInputChange('message', e.target.value)}
@@ -187,7 +189,7 @@ const ContactForm = () => {
               onCheckedChange={(checked) => handleInputChange('newsletter', checked as boolean)}
             />
             <Label htmlFor="newsletter" className="text-sm text-gray-600">
-              Chcę otrzymywać informacje o nowych produktach i promocjach
+              {t('form.newsletter')}
             </Label>
           </div>
 
@@ -197,7 +199,7 @@ const ContactForm = () => {
             className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white"
           >
             <Send className="mr-2 h-5 w-5" />
-            Wyślij zapytanie
+            {t('form.submit')}
           </Button>
         </form>
       </CardContent>
