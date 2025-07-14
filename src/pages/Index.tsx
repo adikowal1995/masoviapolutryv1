@@ -56,7 +56,7 @@ const Index = () => {
               {t('hero.title')}<br />
               <span className="text-yellow-300">{t('hero.title_highlight')}</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-sage-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-sage-100 font-bold max-w-4xl mx-auto">
               {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -71,7 +71,7 @@ const Index = () => {
             </div>
             
             {/* Key Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">20+</div>
                 <div className="text-sage-100">{t('hero.stats.years')}</div>
@@ -81,12 +81,8 @@ const Index = () => {
                 <div className="text-sage-100">{t('hero.stats.countries')}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300">50k</div>
-                <div className="text-sage-100">{t('hero.stats.tons')}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-300">99.8%</div>
-                <div className="text-sage-100">{t('hero.stats.satisfaction')}</div>
+                <div className="text-3xl font-bold text-yellow-300">50+</div>
+                <div className="text-sage-100">{t('hero.stats.products')}</div>
               </div>
             </div>
           </div>
@@ -211,38 +207,6 @@ const Index = () => {
             />
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-sage-100">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('special.title')}</h3>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                {t('special.subtitle')}
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Factory className="h-8 w-8 text-sage-600" />
-                </div>
-                <h4 className="font-bold text-sage-800 mb-2">{t('special.production.title')}</h4>
-                <p className="text-gray-600">{t('special.production.desc')}</p>
-              </div>
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="h-8 w-8 text-sage-600" />
-                </div>
-                <h4 className="font-bold text-sage-800 mb-2">{t('special.private.title')}</h4>
-                <p className="text-gray-600">{t('special.private.desc')}</p>
-              </div>
-              <div className="text-center p-4">
-                <div className="w-16 h-16 bg-sage-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="h-8 w-8 text-sage-600" />
-                </div>
-                <h4 className="font-bold text-sage-800 mb-2">{t('special.export.title')}</h4>
-                <p className="text-gray-600">{t('special.export.desc')}</p>
-              </div>
-            </div>
-          </div>
-
           <div className="text-center mt-12">
             <Button size="lg" className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-12 py-4 text-lg">
               {t('special.cta')}
@@ -305,14 +269,10 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl p-8">
-                <div className="h-full flex flex-col justify-center items-center text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-sage-300 to-sage-500 rounded-full flex items-center justify-center mb-8">
-                    <Shield className="h-16 w-16 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('quality.guarantee')}</h3>
-                  <p className="text-sage-700 text-lg">{t('quality.guarantee.sub')}</p>
-                </div>
+              <div className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl p-8 flex flex-col justify-center items-center text-center">
+                <img src="/laboratory.jpg" alt="Laboratory" className="w-32 h-32 object-cover rounded-full mb-8" />
+                <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('quality.guarantee')}</h3>
+                <p className="text-sage-700 text-lg">{t('quality.guarantee.sub')}</p>
               </div>
             </div>
           </div>
@@ -394,13 +354,9 @@ const Index = () => {
                   <h3 className="text-4xl font-bold text-sage-800">40+</h3>
                   <p className="text-gray-600 font-medium">{t('about.stats.countries')}</p>
                 </div>
-                <div className="text-center p-6 bg-sage-50 rounded-xl">
+                <div className="text-center p-6 bg-sage-50 rounded-xl col-span-2">
                   <h3 className="text-4xl font-bold text-sage-800">1000+</h3>
                   <p className="text-gray-600 font-medium">{t('about.stats.clients')}</p>
-                </div>
-                <div className="text-center p-6 bg-sage-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-sage-800">99.8%</h3>
-                  <p className="text-gray-600 font-medium">{t('about.stats.delivery')}</p>
                 </div>
               </div>
 

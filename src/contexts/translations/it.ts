@@ -17,7 +17,7 @@ export const it = {
   'hero.cta_phone': '+48 516 827 115',
   'hero.stats.years': 'anni di esperienza',
   'hero.stats.countries': 'paesi di esportazione',
-  'hero.stats.tons': 'tonnellate all\'anno',
+  'hero.stats.products': 'prodotti offerti',
   'hero.stats.satisfaction': 'clienti soddisfatti',
   
   // Benefits Section
