@@ -142,6 +142,10 @@ export const pl = {
   'cert.halal.desc': 'Certyfikacja dla rynków muzułmańskich',
   'cert.eu.title': 'EU Health Certificate',
   'cert.eu.desc': 'Certyfikat zdrowia dla eksportu w ramach UE',
+  'cert.brc.title': 'BRC',
+  'cert.brc.desc': 'Międzynarodowy standard bezpieczeństwa żywności',
+  'cert.tuv.title': 'Oświadczenie weryfikacyjne TÜV SÜD',
+  'cert.tuv.desc': 'Standard weryfikacji TÜV SÜD "Dobrostan zwierząt"',
   
   // About Section
   'about.title': 'Lider Eksportu Polskiego Drobiu',
@@ -151,21 +155,22 @@ export const pl = {
   'about.stats.countries': 'krajów eksportu',
   'about.stats.delivery': 'punktualność dostaw',
   'about.cta': 'Poznaj naszą historię',
-  'about.company': 'Masovia Poultry',
-  'about.tagline': 'Polski drób premium od 2004',
+  'about.company': 'Chicken from Poland',
+  'about.tagline': '',
   'about.subtitle': 'Eksport do całego świata',
   
   // Contact Section
   'contact.title': 'Rozpocznij Współpracę',
   'contact.subtitle': 'Skontaktuj się z nami już dziś i otrzymaj spersonalizowaną ofertę dostosowaną do Twoich potrzeb. Nasz zespół ekspertów odpowie na wszystkie pytania i pomoże wybrać najlepsze produkty.',
   'contact.badge.response': 'Odpowiedź w 24h',
-  'contact.badge.samples': 'Darmowe próbki',
+  'contact.badge.samples': 'Najwyższe standardy',
   'contact.badge.prices': 'Konkurencyjne ceny',
   'contact.info.title': 'Dane kontaktowe',
   'contact.phone.title': 'Telefon',
   'contact.phone.export': '+48 516 827 115 (Export Manager)',
   'contact.phone.sales': '+48 987 654 321 (Sales Director)',
   'contact.email.title': 'Email',
+  'contact.email.export': 'chickenfrompoland@gmail.com',
   'contact.address.title': 'Siedziba główna',
   'contact.address.street': 'ul. Przemysłowa 15',
   'contact.address.city': '05-800 Pruszków, Polska',
@@ -231,7 +236,6 @@ export const pl = {
   
   // Footer
   'footer.tagline': 'Wiodący eksporter polskiego drobiu najwyższej jakości na rynki międzynarodowe.',
-  'footer.company_info': 'Polski drób premium od 2004',
   'footer.products.title': 'Produkty',
   'footer.products.breast': 'Piersi z kurczaka',
   'footer.products.wings': 'Skrzydełka kurczaka',

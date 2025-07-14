@@ -27,7 +27,7 @@ export const en = {
   'benefits.delivery.title': 'Delivery Punctuality',
   'benefits.delivery.desc': 'We guarantee deliveries according to schedule. Own transport fleet.',
   'benefits.team.title': 'Experienced Team',
-  'benefits.team.desc': 'Team of experts with 20 years of experience in poultry export.',
+  'benefits.team.desc': 'Team of experts with 10 years of experience in poultry export.',
   'benefits.price.title': 'Competitive Prices',
   'benefits.price.desc': 'Best prices while maintaining highest product quality.',
   
@@ -142,6 +142,10 @@ export const en = {
   'cert.halal.desc': 'Certification for Muslim markets',
   'cert.eu.title': 'EU Health Certificate',
   'cert.eu.desc': 'Health certificate for EU export',
+  'cert.brc.title': 'BRC',
+  'cert.brc.desc': 'International Food Safety Standard',
+  'cert.tuv.title': 'TÜV SÜD Verification Statement',
+  'cert.tuv.desc': 'TÜV SÜD Animal Welfare Verification Standard',
   
   // About Section
   'about.title': 'Leader in Polish Poultry Export',
@@ -152,7 +156,7 @@ export const en = {
   'about.stats.clients': 'satisfied clients',
   'about.stats.delivery': 'delivery punctuality',
   'about.cta': 'Learn our story',
-  'about.company': 'Masovia Poultry',
+  'about.company': 'Chicken from Poland',
   'about.tagline': 'Polish premium poultry since 2004',
   'about.subtitle': 'Export worldwide',
   
@@ -160,13 +164,13 @@ export const en = {
   'contact.title': 'Start Collaboration',
   'contact.subtitle': 'Contact us today and receive a personalized offer tailored to your needs. Our team of experts will answer all questions and help you choose the best products.',
   'contact.badge.response': 'Response in 24h',
-  'contact.badge.samples': 'Free samples',
+  'contact.badge.samples': 'Highest standards',
   'contact.badge.prices': 'Competitive prices',
   'contact.info.title': 'Contact details',
   'contact.phone.title': 'Phone',
   'contact.phone.export': '+48 516 827 115 (Export Manager)',
-  'contact.phone.sales': '+48 987 654 321 (Sales Director)',
   'contact.email.title': 'Email',
+  'contact.email.export': 'chickenfrompoland@gmail.com',
   'contact.address.title': 'Headquarters',
   'contact.address.street': 'ul. Przemysłowa 15',
   'contact.address.city': '05-800 Pruszków, Poland',
@@ -248,5 +252,5 @@ export const en = {
   'footer.company.career': 'Career',
   'footer.company.news': 'News',
   'footer.contact.title': 'Contact',
-  'footer.copyright': '© 2024 Masovia Poultry. All rights reserved.'
+  'footer.copyright': '© 2024 Chicken from Poland. All rights reserved.'
 }; 

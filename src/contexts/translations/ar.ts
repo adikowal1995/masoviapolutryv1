@@ -27,8 +27,8 @@ export const ar = {
   'benefits.quality.desc': 'تحكم صارم في HACCP في كل مرحلة من الإنتاج. مختبرات خاصة.',
   'benefits.delivery.title': 'دقة المواعيد في التوصيل',
   'benefits.delivery.desc': 'نضمن التوصيل حسب الجدول. أسطول نقل خاص.',
-  'benefits.team.title': 'فريق خبير',
-  'benefits.team.desc': 'فريق من الخبراء مع 20 عاماً من الخبرة في تصدير الدواجن.',
+  'benefits.team.title': 'فريق ذو خبرة',
+  'benefits.team.desc': 'فريق من الخبراء مع 10 سنوات من الخبرة في تصدير الدواجن.',
   'benefits.price.title': 'أسعار تنافسية',
   'benefits.price.desc': 'أفضل الأسعار مع الحفاظ على أعلى جودة للمنتجات.',
   
@@ -143,6 +143,10 @@ export const ar = {
   'cert.halal.desc': 'اعتماد للأسواق الإسلامية',
   'cert.eu.title': 'شهادة صحية الاتحاد الأوروبي',
   'cert.eu.desc': 'شهادة صحية لتصدير داخل الاتحاد الأوروبي',
+  'cert.brc.title': 'BRC',
+  'cert.brc.desc': 'المعيار الدولي لسلامة الغذاء',
+  'cert.tuv.title': 'بيان التحقق TÜV SÜD',
+  'cert.tuv.desc': 'معيار التحقق TÜV SÜD "رفاهية الحيوان"',
   
   // About Section
   'about.title': 'رواد تصدير الدواجن البولندية',
@@ -153,21 +157,21 @@ export const ar = {
   'about.stats.clients': 'عميل راضٍ',
   'about.stats.delivery': 'دقة في التوصيل',
   'about.cta': 'اكتشف قصتنا',
-  'about.company': 'ماسوفيا للدواجن',
+  'about.company': 'Chicken from Poland',
   'about.tagline': 'دواجن بولندية مميزة منذ 2004',
   'about.subtitle': 'تصدير للعالم كله',
   
   // Contact Section
   'contact.title': 'ابدأ التعاون',
   'contact.subtitle': 'تواصل معنا اليوم واحصل على عرض مخصص يناسب احتياجاتك. فريق الخبراء لدينا سيجيب على جميع الأسئلة ويساعدك في اختيار أفضل المنتجات.',
-  'contact.badge.response': 'رد في 24 ساعة',
-  'contact.badge.samples': 'عينات مجانية',
+  'contact.badge.samples': 'أعلى المعايير',
+  'contact.badge.response': 'الرد خلال 24 ساعة',
   'contact.badge.prices': 'أسعار تنافسية',
   'contact.info.title': 'معلومات الاتصال',
   'contact.phone.title': 'الهاتف',
-  'contact.phone.export': '+48 516 827 115 (مدير التصدير)',
-  'contact.phone.sales': '+48 987 654 321 (مدير المبيعات)',
+  'contact.phone.export': '+48 516 827 115 (Export Manager)',
   'contact.email.title': 'البريد الإلكتروني',
+  'contact.email.export': 'chickenfrompoland@gmail.com',
   'contact.address.title': 'المقر الرئيسي',
   'contact.address.street': 'ul. Przemysłowa 15',
   'contact.address.city': '05-800 Pruszków, بولندا',
@@ -249,5 +253,5 @@ export const ar = {
   'footer.company.career': 'الوظائف',
   'footer.company.news': 'الأخبار',
   'footer.contact.title': 'اتصل بنا',
-  'footer.copyright': '© 2024 ماسوفيا للدواجن. جميع الحقوق محفوظة.'
+  'footer.copyright': '© 2024 دجاج من بولندا. جميع الحقوق محفوظة.'
 }; 

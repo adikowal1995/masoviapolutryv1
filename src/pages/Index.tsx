@@ -19,13 +19,21 @@ const Index = () => {
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div>
-                <h1 className="text-2xl font-bold text-sage-800">Masovia Poultry</h1>
+                <h1 className="text-2xl font-bold text-sage-800">Chicken from Poland</h1>
                 <p className="text-sm text-sage-600">{t('nav.tagline')}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
               <LanguageSwitcher />
-              <Button className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-3 md:px-6 py-2">
+              <Button
+                className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-3 md:px-6 py-2"
+                onClick={() => {
+                  const contactSection = document.getElementById('kontakt');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 {t('nav.download_price')}
               </Button>
             </div>
@@ -74,15 +82,15 @@ const Index = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">20+</div>
-                <div className="text-sage-100">{t('hero.stats.years')}</div>
+                <div className="text-sage-100 text-xl md:text-2xl">{t('hero.stats.years')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">40+</div>
-                <div className="text-sage-100">{t('hero.stats.countries')}</div>
+                <div className="text-sage-100 text-xl md:text-2xl">{t('hero.stats.countries')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-yellow-300">50+</div>
-                <div className="text-sage-100">{t('hero.stats.products')}</div>
+                <div className="text-sage-100 text-xl md:text-2xl">{t('hero.stats.products')}</div>
               </div>
             </div>
           </div>
@@ -236,15 +244,7 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-sage-100 rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="h-5 w-5 text-sage-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-sage-800 mb-2">{t('quality.lab.title')}</h4>
-                    <p className="text-gray-600">{t('quality.lab.desc')}</p>
-                  </div>
-                </div>
+                {/* Removed Własne laboratoria and its description as requested */}
                 
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-sage-100 rounded-full flex items-center justify-center mt-1">
@@ -269,10 +269,17 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl p-8 flex flex-col justify-center items-center text-center">
-                <img src="/laboratory.jpg" alt="Laboratory" className="w-32 h-32 object-cover rounded-full mb-8" />
-                <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('quality.guarantee')}</h3>
-                <p className="text-sage-700 text-lg">{t('quality.guarantee.sub')}</p>
+              <div
+                className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl p-8 flex flex-col justify-center items-center text-center"
+                style={{
+                  backgroundImage: `url('${import.meta.env.BASE_URL}laboratory.jpg'), linear-gradient(to bottom right, #f1f5f0, #e2e8d9)`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                {/* Removed <img> icon, now using background image */}
+                <h3 className="text-5xl font-bold text-yellow-300 mb-4">{t('quality.guarantee')}</h3>
+                <p className="text-yellow-300 text-2xl font-bold">{t('quality.guarantee.sub')}</p>
               </div>
             </div>
           </div>
@@ -296,8 +303,8 @@ const Index = () => {
               icon={<Shield className="h-12 w-12 text-sage-600" />} 
             />
             <CertificationBadge 
-              name="ISO 22000" 
-              description={t('cert.iso.desc')}
+              name={t('cert.brc.title')} 
+              description={t('cert.brc.desc')}
               icon={<Award className="h-12 w-12 text-sage-600" />} 
             />
             <CertificationBadge 
@@ -324,8 +331,8 @@ const Index = () => {
                 <p className="text-gray-600">{t('cert.halal.desc')}</p>
               </div>
               <div className="text-center">
-                <h4 className="font-bold text-sage-800 mb-2">{t('cert.eu.title')}</h4>
-                <p className="text-gray-600">{t('cert.eu.desc')}</p>
+                <h4 className="font-bold text-sage-800 mb-2">{t('cert.tuv.title')}</h4>
+                <p className="text-gray-600">{t('cert.tuv.desc')}</p>
               </div>
             </div>
           </div>
@@ -335,49 +342,7 @@ const Index = () => {
       {/* About Us */}
       <section id="o-nas" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-sage-800 mb-6">{t('about.title')}</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                {t('about.description1')}
-              </p>
-              <p className="text-lg text-gray-700 mb-8">
-                {t('about.description2')}
-              </p>
-              
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-6 bg-sage-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-sage-800">50,000</h3>
-                  <p className="text-gray-600 font-medium">{t('about.stats.tons')}</p>
-                </div>
-                <div className="text-center p-6 bg-sage-50 rounded-xl">
-                  <h3 className="text-4xl font-bold text-sage-800">40+</h3>
-                  <p className="text-gray-600 font-medium">{t('about.stats.countries')}</p>
-                </div>
-                <div className="text-center p-6 bg-sage-50 rounded-xl col-span-2">
-                  <h3 className="text-4xl font-bold text-sage-800">1000+</h3>
-                  <p className="text-gray-600 font-medium">{t('about.stats.clients')}</p>
-                </div>
-              </div>
-
-              <Button size="lg" className="bg-gradient-to-r from-sage-300 to-sage-400 hover:from-sage-400 hover:to-sage-500 text-sage-900 px-8 py-4">
-                {t('about.cta')}
-              </Button>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-sage-100 to-sage-200 rounded-3xl flex items-center justify-center p-8">
-                <div className="text-center">
-                  <div className="w-40 h-40 bg-gradient-to-br from-sage-300 to-sage-500 rounded-full flex items-center justify-center mx-auto mb-8">
-                    <span className="text-white font-bold text-5xl">MP</span>
-                  </div>
-                  <h3 className="text-3xl font-bold text-sage-800 mb-4">{t('about.company')}</h3>
-                  <p className="text-sage-600 text-lg">{t('about.tagline')}</p>
-                  <p className="text-sage-600 mt-2">{t('about.subtitle')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -390,8 +355,8 @@ const Index = () => {
               {t('contact.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.response')}</Badge>
               <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.samples')}</Badge>
+              <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.response')}</Badge>
               <Badge className="bg-sage-600 text-white px-4 py-2">{t('contact.badge.prices')}</Badge>
             </div>
           </div>
@@ -408,7 +373,6 @@ const Index = () => {
                   <div>
                     <h4 className="font-bold text-xl text-sage-800 mb-2">{t('contact.phone.title')}</h4>
                     <p className="text-gray-600 text-lg">{t('contact.phone.export')}</p>
-                    <p className="text-gray-600 text-lg">{t('contact.phone.sales')}</p>
                   </div>
                 </div>
                 
@@ -418,21 +382,11 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl text-sage-800 mb-2">{t('contact.email.title')}</h4>
-                    <p className="text-gray-600 text-lg">export@masoviapoultry.pl</p>
-                    <p className="text-gray-600 text-lg">sales@masoviapoultry.pl</p>
+                    <p className="text-gray-600 text-lg">chickenfrompoland@gmail.com</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-sage-100 rounded-xl flex items-center justify-center">
-                    <MapPin className="h-8 w-8 text-sage-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xl text-sage-800 mb-2">{t('contact.address.title')}</h4>
-                    <p className="text-gray-600 text-lg">{t('contact.address.street')}</p>
-                    <p className="text-gray-600 text-lg">{t('contact.address.city')}</p>
-                  </div>
-                </div>
+                {/* Removed address block (Siedziba główna, ul. Przemysłowa 15, 05-800 Pruszków, Polska) and location icon as requested */}
               </div>
 
               <div className="mt-12 p-8 bg-sage-50 rounded-2xl">
@@ -454,36 +408,13 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-sage-300 via-sage-400 to-sage-500 text-sage-900">
+      <section className="py-12 bg-gradient-to-r from-sage-300 via-sage-400 to-sage-500 text-sage-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-bold mb-8 text-white">{t('cta.title')}</h2>
-          <p className="text-xl mb-12 max-w-4xl mx-auto text-sage-100">
+          <h2 className="text-5xl font-bold mb-4 text-white">{t('cta.title')}</h2>
+          <p className="text-xl mb-6 max-w-4xl mx-auto text-sage-100">
             {t('cta.subtitle')}
           </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">Tesco</div>
-              <p className="text-sage-100">{t('cta.tesco')}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">Auchan</div>
-              <p className="text-sage-100">{t('cta.auchan')}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-300 mb-2">Metro</div>
-              <p className="text-sage-100">{t('cta.metro')}</p>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-sage-900 font-bold px-12 py-4 text-lg">
-              {t('cta.special_offer')}
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-sage-800 bg-transparent px-12 py-4 text-lg">
-              {t('cta.meeting')}
-            </Button>
-          </div>
+          {/* No buttons as previously removed */}
         </div>
       </section>
 
@@ -493,12 +424,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <span className="text-2xl font-bold">Masovia Poultry</span>
+                <span className="text-2xl font-bold">Chicken from Poland</span>
               </div>
               <p className="text-sage-200 mb-4">
                 {t('footer.tagline')}
               </p>
-              <p className="text-sage-300 font-bold">{t('footer.company_info')}</p>
             </div>
             
             <div>
@@ -528,16 +458,14 @@ const Index = () => {
             <div>
               <h4 className="font-bold mb-6 text-lg">{t('footer.contact.title')}</h4>
               <ul className="space-y-3 text-sage-200">
-                <li><Phone className="inline h-4 w-4 mr-2" />+48 123 456 789</li>
-                <li><Mail className="inline h-4 w-4 mr-2" />export@masoviapoultry.pl</li>
-                <li><MapPin className="inline h-4 w-4 mr-2" />ul. Przemysłowa 15</li>
-                <li>05-800 Pruszków</li>
+                <li><Phone className="inline h-4 w-4 mr-2" />+48 516 827 115</li>
+                <li><Mail className="inline h-4 w-4 mr-2" />chickenfrompoland@gmail.com</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-sage-800 pt-8 text-center text-sage-200">
-            <p>{t('footer.copyright')}</p>
+            <p>© 2024 Chicken from Poland. Wszystkie prawa zastrzeżone.</p>
           </div>
         </div>
       </footer>

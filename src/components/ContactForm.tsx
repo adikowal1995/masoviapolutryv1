@@ -47,7 +47,7 @@ const ContactForm = () => {
         quantity: formData.quantity,
         message: formData.message,
         newsletter: formData.newsletter ? 'Yes' : 'No',
-        to_name: 'Masovia Poultry Team'
+        to_name: 'Chicken from Poland Team'
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
