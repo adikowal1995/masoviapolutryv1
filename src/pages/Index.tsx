@@ -39,7 +39,7 @@ const Index = () => {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#produkty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.products')}</a>
-              <a href="#o-nas" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.about')}</a>
+              <a href="#o-nas" className="text-sage-700 hover:text-sage-900 font-medium transition-colors" onClick={e => { e.preventDefault(); const el = document.getElementById('benefity'); if (el) el.scrollIntoView({ behavior: 'smooth' }); }}>{t('nav.about')}</a>
               <a href="#jakosc" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.quality')}</a>
               <a href="#certyfikaty" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.certificates')}</a>
               <a href="#kontakt" className="text-sage-700 hover:text-sage-900 font-medium transition-colors">{t('nav.contact')}</a>
@@ -101,7 +101,7 @@ const Index = () => {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-20 bg-white">
+      <section id="benefity" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-sage-800 mb-4">{t('benefits.title')}</h2>
