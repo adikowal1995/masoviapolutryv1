@@ -20,4 +20,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: '/masoviapolutryv1/',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
 }));
