@@ -15,10 +15,15 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
+      - name: Clean root except .git, .github, and node_modules
+        run: |
+          shopt -s extglob dotglob
+          rm -rf !(dist|.git|.github|node_modules)
       - name: Copy dist to root
         run: |
           shopt -s dotglob
           cp -r dist/* .
+          rm -rf dist
       - name: Commit and push built files to development branch root
         run: |
           git config user.name github-actions
