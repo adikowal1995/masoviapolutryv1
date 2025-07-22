@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/',
+  base: '/masoviapolutryv1/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
