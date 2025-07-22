@@ -1,8 +1,11 @@
 import React from "react";
 import Index from "./pages/Index";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 const App = () => (
-  <Index />
+  <LanguageProvider>
+    <Index />
+  </LanguageProvider>
 );
 
 export default App;
