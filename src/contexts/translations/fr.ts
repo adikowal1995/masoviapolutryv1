@@ -253,5 +253,7 @@ export const fr = {
   'footer.company.career': 'Carrière',
   'footer.company.news': 'Actualités',
   'footer.contact.title': 'Contact',
-  'footer.copyright': '© 2024 Chicken from Poland. Tous droits réservés.'
+  'footer.copyright': '© 2024 Chicken from Poland. Tous droits réservés.',
+  'meta.title': 'Volaille polonaise premium - Exportateur de volaille de la plus haute qualité',
+  'meta.description': 'Volaille polonaise premium - principal exportateur de viande de volaille de la plus haute qualité. Certificats HACCP, ISO 22000, GlobalG.A.P. Exportation vers toute l’Europe, l’Asie et le Moyen-Orient.'
 }; 

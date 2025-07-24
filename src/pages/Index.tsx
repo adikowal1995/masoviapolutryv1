@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +10,15 @@ import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  useEffect(() => {
+    document.title = t('meta.title');
+    const description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.setAttribute('content', t('meta.description'));
+    }
+  }, [t, language]);
 
   return <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       {/* Header/Navigation */}

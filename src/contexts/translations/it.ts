@@ -253,5 +253,7 @@ export const it = {
   'footer.company.career': 'Carriera',
   'footer.company.news': 'Notizie',
   'footer.contact.title': 'Contatto',
-  'footer.copyright': '© 2024 Chicken from Poland. Tutti i diritti riservati.'
+  'footer.copyright': '© 2024 Chicken from Poland. Tutti i diritti riservati.',
+  'meta.title': 'Pollame polacco premium - Esportatore di pollame di altissima qualità',
+  'meta.description': 'Pollame polacco premium - principale esportatore di carne di pollame di altissima qualità. Certificazioni HACCP, ISO 22000, GlobalG.A.P. Esportazione in tutta Europa, Asia e Medio Oriente.'
 }; 

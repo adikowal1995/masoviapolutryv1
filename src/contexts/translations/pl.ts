@@ -251,5 +251,7 @@ export const pl = {
   'footer.company.career': 'Kariera',
   'footer.company.news': 'Aktualności',
   'footer.contact.title': 'Kontakt',
-  'footer.copyright': '© 2024 Masovia Poultry. Wszystkie prawa zastrzeżone.'
+  'footer.copyright': '© 2024 Masovia Poultry. Wszystkie prawa zastrzeżone.',
+  'meta.title': 'Polski Drób Premium - Eksporter najwyższej jakości drobiu',
+  'meta.description': 'Polski Drób Premium - wiodący eksporter najwyższej jakości mięsa drobiowego. Certyfikaty HACCP, ISO 22000, GlobalG.A.P. Eksport do całej Europy, Azji i Bliskiego Wschodu.'
 }; 

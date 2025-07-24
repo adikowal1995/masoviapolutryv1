@@ -252,5 +252,7 @@ export const en = {
   'footer.company.career': 'Career',
   'footer.company.news': 'News',
   'footer.contact.title': 'Contact',
-  'footer.copyright': '© 2024 Chicken from Poland. All rights reserved.'
+  'footer.copyright': '© 2024 Chicken from Poland. All rights reserved.',
+  'meta.title': 'Polish Premium Poultry - Top Quality Poultry Exporter',
+  'meta.description': 'Polish Premium Poultry - leading exporter of top quality poultry meat. HACCP, ISO 22000, GlobalG.A.P. certified. Export to all of Europe, Asia, and the Middle East.'
 }; 
